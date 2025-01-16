@@ -1,0 +1,71 @@
+
+.main {
+    background: #f8f8f8;
+    padding: 10px 0;
+}
+.social-login .socials {
+    list-style: none;
+    display: flex; /* Align items side by side */
+    padding: 0;
+}
+
+.social-login .socials li {
+    margin-right: 15px; /* Add some space between the items */
+}
+
+.social-login .socials li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000; /* Text color */
+}
+
+.social-login .socials li a img {
+    width: 30px; /* Set uniform image size */
+    height: 30px; /* Set uniform image size */
+    margin-right: 10px; /* Space between image and text */
+    border-radius: 50%; /* Make the image circular */
+}
+
+.social-login .socials li a:hover {
+    color: #007BFF; /* Change text color on hover */
+}
+
+.forgot-password-link {
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 14px;
+    float: right; /* Align to the right side of the parent container */
+    margin-top: 5px;
+    margin-right: 20px; /* Move the link a bit further right */
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+.form-button {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+.form-submit {
+    background-color: #4192d4; /* Green background color */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Add more padding to make the button bigger */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.form-submit:hover {
+    background-color: #45a049; /* Darker green when hovered */
+}
+
+
+
+
+
+

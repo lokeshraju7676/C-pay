@@ -1,0 +1,9 @@
+.navbar-brand img {
+    margin-right: 8px; /* Add space between the image and text */
+    border-radius: 50%; /* Optionally make the image round */
+  }
+
+  .bg-light {
+    --bs-bg-opacity: 1;
+    background-color: #58ccde !important;
+}
