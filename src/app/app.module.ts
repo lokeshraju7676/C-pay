@@ -26,12 +26,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { CreditCardApplicationComponent } from './credit-card-application/credit-card-application.component';
-import { CardServicesComponent } from './pages/card-services/card-services.component';
-import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 import { CustomerDashboardComponent } from './dashboard/customer-dashboard/customer-dashboard.component';
 import { CustomerNavbarComponent } from './dashboard/customer-navbar/customer-navbar.component';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
+import { CreditCardServicesComponent } from './pages/credit-card-service/credit-card-service.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +44,11 @@ import { CustomerDetailsComponent } from './dashboard/customer-details/customer-
     RegisterComponent,
     AdminDashboardComponent,
     CreditCardApplicationComponent,
-    CardServicesComponent,
-    OrderTrackingComponent,
     CustomerDashboardComponent,
     CustomerNavbarComponent,
     AdminDashboardComponent,
     CustomerDetailsComponent,
+    CreditCardServicesComponent
   ],
   imports: [
     BrowserModule,  // Includes CommonModule
