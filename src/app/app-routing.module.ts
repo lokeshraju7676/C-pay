@@ -7,11 +7,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { adminGuard } from './guards/admin-guard.guard';
+import { CardServicesComponent } from './pages/card-services/card-services.component';
 import { CreditCardApplicationComponent } from './credit-card-application/credit-card-application.component';
+import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 import { CustomerDashboardComponent } from './dashboard/customer-dashboard/customer-dashboard.component';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
-import { CreditCardServicesComponent } from './pages/credit-card-service/credit-card-service.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route redirects to 'home'
@@ -21,10 +22,11 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admindashboard', component: AdminDashboardComponent, canActivate: [adminGuard] },
+  { path: 'card-services', component: CardServicesComponent },
   {path : 'credit-card-application', component:CreditCardApplicationComponent},
+  { path: 'ordertracking', component: OrderTrackingComponent },
   {path:'customerdashboard', component: CustomerDashboardComponent },
   {path:'customerdetails', component: CustomerDetailsComponent},
-  {path:'credit-card-service', component:CreditCardServicesComponent},
   { path: '**', redirectTo: 'home' },  // Wildcard route to handle unmatched URLs
 ];
 
