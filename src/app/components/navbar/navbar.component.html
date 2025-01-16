@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/">
+    <img src="assets/img/cashless-payment.png" alt="C-pay" width="30" height="30" class="d-inline-block align-top">
+    C-pay
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <button mat-button class="nav-link" routerLink="/">Home</button>
+      </li>
+      <li class="nav-item dropdown">
+        <button mat-button [matMenuTriggerFor]="menu" class="nav-link">
+          Services
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/card-services">Card Services</button>
+          <button mat-menu-item routerLink="/rewards">Rewards</button>
+          <button mat-menu-item routerLink="/benefits">Benefits</button>
+        </mat-menu>
+      </li>
+      <li class="nav-item">
+        <button mat-button class="nav-link" routerLink="/about-us">About Us</button>
+      </li>
+      <li class="nav-item">
+        <button mat-button class="nav-link" routerLink="/contact-us">Contact Us</button>
+      </li>
+       <!-- New section for Tracking Order -->
+       <li class="nav-item">
+        <button mat-button class="nav-link" routerLink="/ordertracking">Tracking Order</button>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav">
+      <!-- Login/Register buttons visible when not logged in -->
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <button mat-button class="btn btn-outline-primary me-2" routerLink="/login">Login</button>
+      </li>
+      <li class="nav-item" *ngIf="!isLoggedIn">
+        <button mat-button class="btn btn-primary" routerLink="/register">Register</button>
+      </li>
+
+      <!-- Logout button visible when logged in -->
+      <li class="nav-item" *ngIf="isLoggedIn">
+        <button mat-button class="btn btn-outline-danger" (click)="logout()">Logout</button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Separator Line (styled using CSS) -->
+<hr class="navbar-separator">
+
+<!-- Body Content -->
+<div class="body-content">
+  <!-- Your body content goes here -->
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Track Your Order</h2>
+    <p>Enter your application ID to track the order status.</p>
+  
+    <!-- Form to input order ID -->
+    <form (ngSubmit)="onTrackOrder()">
+      <div class="form-group">
+        <label for="orderId">Application ID</label>
+        <input id="orderId" [(ngModel)]="orderId" name="orderId" class="form-control" type="number" required />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Track Order</button>
+    </form>
+  
+    <!-- Error message display -->
+    <div *ngIf="errorMessage" class="alert alert-danger mt-3">
+      {{ errorMessage }}
+    </div>
+  
+    <!-- Order status display -->
+    <div *ngIf="orderStatus" class="alert alert-success mt-3">
+      {{ orderStatus }}
+    </div>
+  </div>
+  

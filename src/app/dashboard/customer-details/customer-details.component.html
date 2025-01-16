@@ -1,0 +1,24 @@
+<app-customer-navbar></app-customer-navbar>
+<main class="dashboard-main" style="background-color: rgba(139, 139, 139, 0.347); margin-top: 100px; padding-top: 20px; margin-left: 30px; margin-right: 30px; border-radius: 9px; padding: 20px;">
+
+    <!-- Back to Dashboard Button -->
+    <div class="back-button-container">
+      <button class="back-button" (click)="goBackToDashboard()" style=" margin-bottom: 20px;">Back to Dashboard</button>
+    </div>
+  
+    <!-- Customer Details Section -->
+    <div class="customer-details" style="transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37); border-radius: 10px;">
+    
+      <ul>
+        <li *ngFor="let customer of customerList" style="list-style: none;">
+          <div class="customer-item">
+            <h4 style="font-weight: 600;">{{ customer.name }} - {{ customer.status }}</h4>
+            <button *ngIf="customer.status !== 'Blocked'" (click)="blockCustomer(customer.id)" style="background-color: rgba(0, 0, 0, 0.482);">Block</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    
+  </main>
+  

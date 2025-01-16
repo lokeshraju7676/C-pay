@@ -1,0 +1,67 @@
+<app-customer-navbar></app-customer-navbar>
+
+
+<main class="dashboard-main" style="background-color: rgba(139, 139, 139, 0.347);">
+  <!-- Welcome Section -->
+  <div class="welcome-card">
+    <div class="welcome-content">
+      <div class="user-avatar">
+        <span class="material-icons">person</span>
+      </div>
+      <div class="welcome-text">
+        <h1>Welcome back, {{adminName}}!</h1>
+        <p>Manage your cards and transactions</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Actions -->
+   
+  <div class="quick-actions">
+    
+    <div class="action-card" (click)="goToCustomerDetails()">
+      <div class="action-icon">
+        <span class="material-icons">person</span>
+      </div>
+      <div class="action-content">
+        <h3>Show Customers</h3>
+        <p style="color: black;">View and manage your credit cards</p>
+      </div>
+      <span class="material-icons arrow"  style="color: black;">chevron_right</span>
+    </div>
+
+    <div class="action-card">
+      <div class="action-icon">
+        <span class="material-icons">pin_drop</span>
+      </div>
+      <div class="action-content">
+        <h3>Track Order</h3>
+        <p style="color: black;">Track your spending</p>
+      </div>
+      <span class="material-icons arrow"  style="color: black;" >chevron_right</span>
+    </div>
+
+    <div class="action-card">
+      <div class="action-icon">
+        <span class="material-icons">card_giftcard</span>
+      </div>
+      <div class="action-content">
+        <h3>Cards</h3>
+        <p style="color: black;">Edit Cards</p>
+      </div>
+      <span class="material-icons arrow" style="color: black;">chevron_right</span>
+    </div>
+  </div>
+
+  <!-- Recent Transactions -->
+  <div class="transactions-card">
+    <div class="card-header">
+      <h2>Requests</h2>
+    </div>
+    <ul ng-if="post.capabilities.items.length == 0">
+        <li *ngFor="let cust of customerList">{{cust.name}}</li>
+    </ul>
+    <h4 ></h4>
+    
+  </div>
+</main>

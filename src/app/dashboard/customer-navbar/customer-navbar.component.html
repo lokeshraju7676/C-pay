@@ -1,0 +1,32 @@
+<nav class="dashboard-nav" style="background-color: rgb(255, 255, 255);">
+  <div class="nav-left">
+    <div class="logo" (click)="goHome()" style=" cursor: pointer;" >CPAY</div>
+  </div>
+  <div class="nav-right">
+    <!-- Notification Button -->
+    <label for="notifications-checkbox" class="icon-button">
+      <span class="material-icons">notifications</span>
+    </label>
+    <input type="checkbox" id="notifications-checkbox" class="notifications-checkbox" [(ngModel)]="notificationsOpen">
+    
+    <div class="notifications-box" style="background-color: white;" *ngIf="notificationsOpen">
+      <h4>Notifications</h4>
+      <div class="notifications-list">
+        <div class="notification-item" *ngFor="let notification of notifications">
+          <p>{{ notification }}</p>
+        </div>
+        <div class="no-notifications" *ngIf="notifications.length === 0">
+          <p>No notifications</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings and Logout Buttons -->
+    <button class="icon-button">
+      <span class="material-icons">settings</span>
+    </button>
+    <button class="icon-button logout" (click)="logout()">
+      <span class="material-icons">logout</span>
+    </button>
+  </div>
+</nav>
