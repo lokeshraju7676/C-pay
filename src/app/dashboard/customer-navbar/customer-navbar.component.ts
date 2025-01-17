@@ -38,8 +38,8 @@ export class CustomerNavbarComponent implements OnInit {
       this.notificationsOpen = false;
     }
   }
-  goHome(){
-    this.route.navigate(['home']);
-    this.logout();
+  goDashboard(){
+    this.route.navigate(['./customerdashboard']);
+    ;
   }
 }

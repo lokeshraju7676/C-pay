@@ -1,7 +1,7 @@
 /* Banner Section */
 .banner {
     position: relative;
-    background-image: url('/assets/img/Banner.png'); /* Set image as background */
+    background-image: url('/assets/img/homepage.jpg'); /* Set image as background */
     background-size: cover;
     background-position: center;
     height: 650px;
@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    border-color: white;
   }
   
   .banner .container {

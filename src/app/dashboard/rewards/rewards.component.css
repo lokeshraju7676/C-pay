@@ -1,0 +1,119 @@
+.rewards-container {
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    background: linear-gradient(45deg, #862633, #D4313C);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .apply-btn {
+    background: #fff;
+    color: #862633;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .apply-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+  
+  .benefits, .features {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .benefit-card {
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .benefit-card h3 {
+    color: #862633;
+    margin-bottom: 10px;
+  }
+  
+  .features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .feature {
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 10px;
+  }
+  
+  .feature h3 {
+    color: #862633;
+    margin-bottom: 15px;
+  }
+  
+  .feature ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .feature ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .feature ul li:before {
+    content: "•";
+    color: #862633;
+    position: absolute;
+    left: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2em;
+    }
+  
+    .benefits-grid {
+      grid-template-columns: 1fr;
+    }
+  }

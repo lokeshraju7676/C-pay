@@ -32,6 +32,8 @@ import { CustomerDashboardComponent } from './dashboard/customer-dashboard/custo
 import { CustomerNavbarComponent } from './dashboard/customer-navbar/customer-navbar.component';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
+import { UserDetailsComponent } from './dashboard/user-details/user-details.component';
+import { RewardsComponent } from './dashboard/rewards/rewards.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { CustomerDetailsComponent } from './dashboard/customer-details/customer-
     CustomerNavbarComponent,
     AdminDashboardComponent,
     CustomerDetailsComponent,
+    UserDetailsComponent,
+    RewardsComponent,
   ],
   imports: [
     BrowserModule,  // Includes CommonModule

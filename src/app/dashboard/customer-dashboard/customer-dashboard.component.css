@@ -88,6 +88,7 @@
 .action-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(80deg, #b63546, #ff4653) ;
 }
 
 .action-icon {
@@ -112,7 +113,7 @@
 }
 
 .action-content p {
-  color: #666;
+  color: #862633;
   font-size: 0.875rem;
 }
 

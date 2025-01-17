@@ -13,6 +13,8 @@ import { OrderTrackingComponent } from './ordertracking/ordertracking.component'
 import { CustomerDashboardComponent } from './dashboard/customer-dashboard/customer-dashboard.component';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
+import { UserDetailsComponent } from './dashboard/user-details/user-details.component';
+import { RewardsComponent } from './dashboard/rewards/rewards.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route redirects to 'home'
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: 'ordertracking', component: OrderTrackingComponent },
   {path:'customerdashboard', component: CustomerDashboardComponent },
   {path:'customerdetails', component: CustomerDetailsComponent},
+  {path: 'userdetails', component: UserDetailsComponent},
+  {path:'rewards', component:RewardsComponent},
   { path: '**', redirectTo: 'home' },  // Wildcard route to handle unmatched URLs
 ];
 
