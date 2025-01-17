@@ -6,7 +6,7 @@
       <div class="form-image-container">
         <!-- Image Section -->
         <div class="image-section">
-          <img src="assets/img/card application.webp" alt="Credit Card" class="application-image" />
+          <img src="assets/img/card_application.webp" alt="Credit Card" class="application-image" />
         </div>
 
         <!-- Application Form Section -->
@@ -21,6 +21,7 @@
           <!-- Success Message: Application submitted successfully -->
           <div *ngIf="successMessage" class="alert alert-success">
             {{ successMessage }}
+            <p>Track your order with Order ID: {{ orderId }}</p>
           </div>
 
           <!-- Application Form -->
@@ -82,4 +83,5 @@
     </div>
   </div>
 </div>
+
 <app-footer></app-footer>
