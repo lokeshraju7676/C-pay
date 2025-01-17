@@ -1,7 +1,7 @@
 <app-customer-navbar></app-customer-navbar>
 
 
-<main class="dashboard-main">
+<main class="dashboard-main" style=" background-color: rgb(255, 245, 234);">
   <!-- Welcome Section -->
   <div class="welcome-card">
     <div class="welcome-content">
@@ -17,7 +17,7 @@
 
   <!-- Quick Actions -->
   <div class="quick-actions">
-    <div class="action-card">
+    <div class="action-card" (click)="goDetails()" >
       <div class="action-icon">
         <span class="material-icons">person</span>
       </div>
@@ -39,7 +39,7 @@
       <span class="material-icons arrow">chevron_right</span>
     </div>
 
-    <div class="action-card">
+    <div class="action-card" (click)="goRewards()">
       <div class="action-icon">
         <span class="material-icons">card_giftcard</span>
       </div>

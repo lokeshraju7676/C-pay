@@ -1,0 +1,74 @@
+.user-details-card {
+    background: var(--white);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 3rem auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-section {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .profile-info h2 {
+    font-size: 1.75rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+  }
+  
+  .profile-info .username {
+    font-size: 1.125rem;
+    color: #666;
+  }
+  
+  .details-section {
+    margin-top: 2rem;
+  }
+  
+  .detail {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+  }
+  
+  .detail-label {
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  
+  .detail-value {
+    color: #666;
+  }
+  .back-to-dashboard {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .back-to-dashboard button {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .back-to-dashboard button{
+    background-color: rgb(255, 245, 234);
+  }
+  
+  .back-to-dashboard button:hover {
+    background-color:rgb(255, 189, 189) ;
+  }
+  
