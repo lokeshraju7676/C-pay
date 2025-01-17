@@ -1,85 +1,71 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <div class="card">
-    <div class="card-body">
-      <div class="form-image-container">
-        <!-- Image Section -->
-        <div class="image-section">
-          <img src="assets/img/card application.webp" alt="Credit Card" class="application-image" />
-        </div>
+  <h2>Credit Card Application</h2>
 
-        <!-- Application Form Section -->
-        <div class="form-section">
-          <h2>Credit Card Application</h2>
+  <!-- Error Message: Form validation failed -->
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
 
-          <!-- Error Message: Form validation failed -->
-          <div *ngIf="errorMessage" class="alert alert-danger">
-            {{ errorMessage }}
-          </div>
+  <!-- Success Message: Application submitted successfully -->
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
 
-          <!-- Success Message: Application submitted successfully -->
-          <div *ngIf="successMessage" class="alert alert-success">
-            {{ successMessage }}
-          </div>
-
-          <!-- Application Form -->
-          <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
-            <div class="form-group">
-              <label for="applicantName">Full Name</label>
-              <input id="applicantName" formControlName="applicantName" class="form-control" />
-              <div *ngIf="applicationForm.get('applicantName')?.invalid && applicationForm.get('applicantName')?.touched" class="text-danger">
-                Full name is required.
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="applicantEmail">Email</label>
-              <input id="applicantEmail" formControlName="applicantEmail" class="form-control" />
-              <div *ngIf="applicationForm.get('applicantEmail')?.invalid && applicationForm.get('applicantEmail')?.touched" class="text-danger">
-                Please enter a valid email address.
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="mobileNumber">Mobile Number</label>
-              <input id="mobileNumber" formControlName="mobileNumber" class="form-control" />
-              <div *ngIf="applicationForm.get('mobileNumber')?.invalid && applicationForm.get('mobileNumber')?.touched" class="text-danger">
-                Mobile number is required.
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="employmentStatus">Employment Status</label>
-              <input id="employmentStatus" formControlName="employmentStatus" class="form-control" />
-              <div *ngIf="applicationForm.get('employmentStatus')?.invalid && applicationForm.get('employmentStatus')?.touched" class="text-danger">
-                Employment status is required.
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="annualIncome">Annual Income</label>
-              <input id="annualIncome" formControlName="annualIncome" class="form-control" type="number" />
-              <div *ngIf="applicationForm.get('annualIncome')?.invalid && applicationForm.get('annualIncome')?.touched" class="text-danger">
-                Annual income is required.
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="address">Address</label>
-              <input id="address" formControlName="address" class="form-control" />
-              <div *ngIf="applicationForm.get('address')?.invalid && applicationForm.get('address')?.touched" class="text-danger">
-                Address is required.
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary" [disabled]="applicationForm.invalid">
-              Submit Application
-            </button>
-          </form>
-        </div>
+  <!-- Application Form -->
+  <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="applicantName">Full Name</label>
+      <input id="applicantName" formControlName="applicantName" class="form-control" />
+      <div *ngIf="applicationForm.get('applicantName')?.invalid && applicationForm.get('applicantName')?.touched" class="text-danger">
+        Full name is required.
       </div>
     </div>
-  </div>
+
+    <div class="form-group">
+      <label for="applicantEmail">Email</label>
+      <input id="applicantEmail" formControlName="applicantEmail" class="form-control" />
+      <div *ngIf="applicationForm.get('applicantEmail')?.invalid && applicationForm.get('applicantEmail')?.touched" class="text-danger">
+        Please enter a valid email address.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="mobileNumber">Mobile Number</label>
+      <input id="mobileNumber" formControlName="mobileNumber" class="form-control" />
+      <div *ngIf="applicationForm.get('mobileNumber')?.invalid && applicationForm.get('mobileNumber')?.touched" class="text-danger">
+        Mobile number is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="employmentStatus">Employment Status</label>
+      <input id="employmentStatus" formControlName="employmentStatus" class="form-control" />
+      <div *ngIf="applicationForm.get('employmentStatus')?.invalid && applicationForm.get('employmentStatus')?.touched" class="text-danger">
+        Employment status is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="annualIncome">Annual Income</label>
+      <input id="annualIncome" formControlName="annualIncome" class="form-control" type="number" />
+      <div *ngIf="applicationForm.get('annualIncome')?.invalid && applicationForm.get('annualIncome')?.touched" class="text-danger">
+        Annual income is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address</label>
+      <input id="address" formControlName="address" class="form-control" />
+      <div *ngIf="applicationForm.get('address')?.invalid && applicationForm.get('address')?.touched" class="text-danger">
+        Address is required.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="applicationForm.invalid">
+      Submit Application
+    </button>
+  </form>
 </div>
 <app-footer></app-footer>

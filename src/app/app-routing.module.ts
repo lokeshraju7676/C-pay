@@ -8,13 +8,13 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { adminGuard } from './guards/admin-guard.guard';
 import { CreditCardApplicationComponent } from './credit-card-application/credit-card-application.component';
-import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 import { CustomerDashboardComponent } from './dashboard/customer-dashboard/customer-dashboard.component';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
 import { UserDetailsComponent } from './dashboard/user-details/user-details.component';
 import { RewardsComponent } from './dashboard/rewards/rewards.component';
 import { CreditCardServiceComponent } from './pages/credit-card-service/credit-card-service.component';
+import { TrackingComponent } from './order-tracking/tracking/tracking.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route redirects to 'home'
@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'admindashboard', component: AdminDashboardComponent, canActivate: [adminGuard] },
   { path: 'credit-card-service', component: CreditCardServiceComponent },
   {path : 'credit-card-application', component:CreditCardApplicationComponent},
-  { path: 'ordertracking', component: OrderTrackingComponent },
+  { path: 'tracking', component: TrackingComponent },
   {path:'customerdashboard', component: CustomerDashboardComponent },
   {path:'customerdetails', component: CustomerDetailsComponent},
   {path: 'userdetails', component: UserDetailsComponent},
