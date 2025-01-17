@@ -1,0 +1,72 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="page-header text-center">
+    <h1 style="color: rgb(23, 166, 58);"><b>Credit Card Payment Gateway</b></h1>
+  </div>
+
+  <!-- Credit Card Payment Form -->
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <div class="inlineimage">
+            <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Mastercard-Curved.png">
+            <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Discover-Curved.png">
+            <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/Paypal-Curved.png">
+            <img class="img-responsive images" src="https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/128/American-Express-Curved.png">
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <form role="form">
+            <div class="form-group">
+              <label>CARD NUMBER</label>
+              <input [(ngModel)]="cardNumber" name="cardNumber" type="tel" class="form-control" placeholder="Valid Card Number" required/>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-7 col-md-7">
+                <div class="form-group">
+                  <label>EXPIRATION DATE</label>
+                  <input [(ngModel)]="expirationDate" name="expirationDate" type="tel" class="form-control" placeholder="MM / YY" required/>
+                </div>
+              </div>
+              <div class="col-xs-5 col-md-5">
+                <div class="form-group">
+                  <label>CVV</label>
+                  <input [(ngModel)]="cvv" name="cvv" type="tel" class="form-control" placeholder="CVV" required/>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>CARD HOLDER NAME</label>
+              <input [(ngModel)]="cardholderName" name="cardholderName" type="text" class="form-control" placeholder="Card Holder Name" required/>
+            </div>
+          </form>
+        </div>
+
+        <div class="panel-footer">
+          <button (click)="confirmPayment()" class="btn btn-success btn-lg btn-block">Confirm Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Status Message -->
+  <div *ngIf="message" class="alert alert-danger text-center mt-4">
+    <strong>{{ message }}</strong>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+<!-- Payment Success Message -->
+<div *ngIf="message === 'Payment Successful!'" class="container text-center mt-5">
+  <div class="alert alert-success">
+    <h2>Payment Successful!</h2>
+    <p>Your payment was processed successfully.</p>
+  </div>
+  <button class="btn btn-primary" (click)="goToHome()">Go to Home</button>
+</div>
