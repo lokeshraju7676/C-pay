@@ -26,7 +26,6 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { CreditCardApplicationComponent } from './credit-card-application/credit-card-application.component';
-import { CardServicesComponent } from './pages/card-services/card-services.component';
 import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 import { CustomerDashboardComponent } from './dashboard/customer-dashboard/customer-dashboard.component';
 import { CustomerNavbarComponent } from './dashboard/customer-navbar/customer-navbar.component';
@@ -34,6 +33,7 @@ import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashb
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
 import { UserDetailsComponent } from './dashboard/user-details/user-details.component';
 import { RewardsComponent } from './dashboard/rewards/rewards.component';
+import { CreditCardServiceComponent } from './pages/credit-card-service/credit-card-service.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +47,6 @@ import { RewardsComponent } from './dashboard/rewards/rewards.component';
     RegisterComponent,
     AdminDashboardComponent,
     CreditCardApplicationComponent,
-    CardServicesComponent,
     OrderTrackingComponent,
     CustomerDashboardComponent,
     CustomerNavbarComponent,
@@ -55,6 +54,7 @@ import { RewardsComponent } from './dashboard/rewards/rewards.component';
     CustomerDetailsComponent,
     UserDetailsComponent,
     RewardsComponent,
+    CreditCardServiceComponent,
   ],
   imports: [
     BrowserModule,  // Includes CommonModule
