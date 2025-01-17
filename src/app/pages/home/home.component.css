@@ -1,133 +1,146 @@
 /* Banner Section */
 .banner {
-    position: relative;
-    background-image: url('/assets/img/homepage.jpg'); /* Set image as background */
-    background-size: cover;
-    background-position: center;
-    height: 650px;
-    display: flex;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 650px;
+  display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    border-color: white;
-  }
-  
-  .banner .container {
-    position: relative;
-    z-index: 2; /* Ensure content is above the overlay */
-    text-align: center;
-  }
-  
-  .banner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    z-index: 1; /* Overlay is below the content */
-  }
-  
-  .banner-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #06080a;
-  }
-  
-  .banner-description {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-  }
-  
-  /* New Section Below the Banner */
-  .rewards-benefits {
-    background-color: #f8f9fa;
-    padding: 50px 0;
-  }
-  
-  .rewards-benefits .section-title {
-    font-size: 2rem;
-    font-weight: 600;
+  color: white;
+  overflow: hidden; /* Hide overflow to prevent images from going outside */
+}
+
+.swiper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.banner .container {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  text-align: center;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  z-index: 1; /* Overlay is below the content */
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #06080a;
+}
+
+.banner-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/* New Section Below the Banner */
+.rewards-benefits {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+.rewards-benefits .section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.rewards-benefits .section-description {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* Reward Item Styling */
+.reward-item {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Ensure that all items stretch to the same height */
+}
+
+.reward-item h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.reward-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Image Styling */
+.reward-item img.reward-image {
+  width: 100%;
+  max-width: 150px; /* Ensures the image stays proportional */
+  height: auto;
+  margin-bottom: 15px; /* Adds space below the image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .reward-item {
     margin-bottom: 20px;
   }
-  
-  .rewards-benefits .section-description {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
-  }
-  
-  /* Reward Item Styling */
-  .reward-item {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%; /* Ensure that all items stretch to the same height */
-  }
-  
-  .reward-item h4 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-  }
-  
-  .reward-item p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  /* Image Styling */
-  .reward-item img.reward-image {
-    width: 100%;
-    max-width: 150px; /* Ensures the image stays proportional */
-    height: auto;
-    margin-bottom: 15px; /* Adds space below the image */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .reward-item {
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Flexbox for aligning content */
-  .rewards-benefits .row .col-md-4 {
-    display: flex;
-    flex-direction: column; /* Aligns the image and content vertically */
-    align-items: center;
-    height: 100%; /* Ensures all columns stretch to the same height */
-  }
-  
-  .reward-item {
-    flex-grow: 5; /* Ensures the content takes up available space */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distributes content evenly inside the box */
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-  }
-  
-  .reward-image {
-    width: 100%;
-    height: auto;
-    max-width: 150px; /* Adjust this value as needed */
-    margin-bottom: 15px;
-  }
-  
-  .reward-item h4, .reward-item p {
-    margin: 0;
-    padding: 5px 0;
-  }
-  
+}
+
+/* Flexbox for aligning content */
+.rewards-benefits .row .col-md-4 {
+  display: flex;
+  flex-direction: column; /* Aligns the image and content vertically */
+  align-items: center;
+  height: 100%; /* Ensures all columns stretch to the same height */
+}
+
+.reward-item {
+  flex-grow: 5; /* Ensures the content takes up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distributes content evenly inside the box */
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.reward-image {
+  width: 100%;
+  height: auto;
+  max-width: 150px; /* Adjust this value as needed */
+  margin-bottom: 15px;
+}
+
+.reward-item h4, .reward-item p {
+  margin: 0;
+  padding: 5px 0;
+}
