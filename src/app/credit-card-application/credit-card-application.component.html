@@ -1,6 +1,28 @@
 <app-navbar></app-navbar>
 
 <div class="container">
+  <div class="card">
+    <div class="card-body">
+      <div class="form-image-container">
+        <!-- Image Section -->
+        <div class="image-section">
+          <img src="assets/img/card_application.webp" alt="Credit Card" class="application-image" />
+        </div>
+
+        <!-- Application Form Section -->
+        <div class="form-section">
+          <h2>Credit Card Application</h2>
+
+          <!-- Error Message: Form validation failed -->
+          <div *ngIf="errorMessage" class="alert alert-danger">
+            {{ errorMessage }}
+          </div>
+
+          <!-- Success Message: Application submitted successfully -->
+          <div *ngIf="successMessage" class="alert alert-success">
+            {{ successMessage }}
+            <p>Track your order with Order ID: {{ orderId }}</p>
+          </div>
   <h2>Credit Card Application</h2>
 
   <!-- Error Message: Form validation failed -->
@@ -68,4 +90,5 @@
     </button>
   </form>
 </div>
+
 <app-footer></app-footer>

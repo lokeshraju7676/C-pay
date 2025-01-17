@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 interface CreditCardApplication {
+  orderId: number | null;
   id: number;
   applicantName: string;
   applicantEmail: string;
@@ -61,8 +62,9 @@ export class CreditCardApplicationService {
   }
 
    // Track Order by Application ID
-   trackOrder(applicationId: number): Observable<OrderTracking> {
-    return this.http.get<OrderTracking>(`${this.orderApiUrl}/track/${applicationId}`);
+   trackOrder(orderId: string): Observable<any> {
+    // Make a GET request to fetch order details by orderId
+    return this.http.get<any>(`${this.orderApiUrl}/track/${orderId}`);
   }
 
 }

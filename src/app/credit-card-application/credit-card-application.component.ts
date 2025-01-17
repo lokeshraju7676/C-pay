@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CreditCardApplicationService } from 'src/app/services/credit-card-application.service'; 
+import { CreditCardApplicationService } from 'src/app/services/credit-card-application.service';  // Service to communicate with backend
 
 @Component({
   selector: 'app-credit-card-application',
@@ -12,10 +12,11 @@ export class CreditCardApplicationComponent implements OnInit {
   applicationForm: FormGroup;
   errorMessage: string = '';
   successMessage: string = '';
+  orderId: number | null = null;  // Store order ID for tracking
 
   constructor(
     private fb: FormBuilder,
-    private creditCardService: CreditCardApplicationService,  // Inject service
+    private creditCardService: CreditCardApplicationService,  // Inject the service
     private router: Router
   ) {
     this.applicationForm = this.fb.group({
@@ -48,6 +49,10 @@ export class CreditCardApplicationComponent implements OnInit {
     this.creditCardService.applyForCreditCard(this.applicationForm.value).subscribe({
       next: (response) => {
         console.log('Application submitted successfully', response);
+        
+        // Retrieve the Order ID from the response
+        this.orderId = response.orderId;  // Assuming the response contains the orderId
+        
         // Show success message after successful submission
         this.successMessage = 'Card Ordered Successfully! Your application is being processed.';
         
