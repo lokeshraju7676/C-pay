@@ -1,162 +1,136 @@
-/* Styling for "Credit Cards" Title */
-.card-title {
-    text-align: center;
-    font-weight: 700; /* Make it bold */
-    font-size: 2.2rem; /* Reduced font size for balance */
-    color: #333; /* Dark color for text */
-    letter-spacing: 1.5px; /* Slightly reduced letter spacing */
-    margin-bottom: 20px; /* Reduced bottom margin for a more compact look */
-    text-transform: uppercase; /* Uppercase text for emphasis */
-    font-family: 'Poppins', sans-serif; /* Modern font */
-  }
-  
-  /* Reduced underline effect for the title */
-  .card-title:after {
-    content: '';
-    display: block;
-    width: 60%; /* Narrower underline */
-    height: 2px; /* Thinner line */
-    background-color: #333; /* Line color to match the text */
-    margin: 15px auto 0; /* Centered underline beneath the title */
-    border-radius: 2px; /* Slightly rounded edges for the line */
-    opacity: 0; /* Start with the line invisible */
-    transition: opacity 0.3s ease, width 0.3s ease; /* Smooth transition for the line's appearance */
-  }
-  
-  
-  
-  /* Enhanced Navbar Styling */
-  .nav-tabs {
-    display: flex;
-    justify-content: center;
-    background-color: #000000; /* Black background for the navbar */
-    border-radius: 0; /* Removed rounded corners for a flat navbar */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-bottom: 30px; /* Space below the navbar */
-    padding: 8px;
-    position: relative; /* Added positioning to enable line effects */
-  }
-  
-  /* Navbar Tab Styling */
-  .nav-tabs .nav-item {
-    margin: 0 15px; /* Spacing between items */
-  }
-  
-  /* Navbar Links */
-  .nav-tabs .nav-link {
-    padding: 10px 20px; /* Adjusted padding for a more compact and neat look */
-    font-size: 1.2rem; /* Slightly larger font size */
-    font-weight: 600; /* Bold text for emphasis */
-    color: #ffffff; /* White text color */
-    background-color: transparent; /* Transparent background */
-    border: 2px solid transparent; /* Transparent border */
-    text-transform: uppercase; /* Uppercase letters */
-    letter-spacing: 1px; /* Slightly increased spacing between letters */
-    position: relative; /* Enable positioning for underline effect */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-  }
-  
-  /* On hover, underline with black line */
-  .nav-tabs .nav-link:hover {
-    color: #ffffff; /* Keep white color */
-    border-color: transparent; /* Remove the border */
-  }
-  
-  /* Underline line effect */
-  .nav-tabs .nav-link:after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: black;
-    left: 50%;
-    bottom: -4px;
-    transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  /* Expand underline on hover */
-  .nav-tabs .nav-link:hover:after {
-    width: 100%;
-    left: 0;
-  }
-  
-  /* Active Tab Styling */
-  .nav-tabs .nav-link.active {
-    color: #007bff; /* Light blue color for active tab */
-    border-bottom: 2px solid #007bff; /* Blue underline for active tab */
-    font-weight: 600;
-  }
-  
-  /* Card Styling */
-  .card-inner {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
-  .card-details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 60%;
-  }
-  
-  .card img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    height: auto;
-    border: none;
-  }
-  /* Card Benefits Styling */
-  .card-benefits {
-    margin-left: 30px; /* Increase the margin on the left for better spacing */
-    width: 50%; /* Increase the width to make the block bigger */
-    padding: 25px; /* Increase padding for more space inside the block */
-    background-color: #f8f9fa; /* Light background */
-    border-radius: 10px; /* Rounded corners for the block */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for better contrast */
-  }
-  
-  /* Heading inside Card Benefits */
-  .card-benefits h6 {
-    font-size: 1.4rem; /* Increase the font size for better visibility */
-    font-weight: bold;
-    color: #007bff; /* Blue color for headings */
-    margin-bottom: 15px; /* Add some space below the heading */
-  }
-  
-  /* List inside Card Benefits */
-  .card-benefits ul {
-    padding-left: 20px;
-  }
-  
-  /* List items inside Card Benefits */
-  .card-benefits ul li {
-    margin-bottom: 12px; /* More space between list items */
-    font-size: 1.1rem; /* Increase font size for better readability */
-    color: #333; /* Darker text color for readability */
-  }
-  
-  /* Button inside Card Benefits */
-  .card-benefits .btn {
-    margin-top: 25px; /* More space at the top of the button */
-    padding: 12px 30px; /* Increase padding for a larger button */
-    font-size: 1.2rem; /* Increase font size for better readability */
-    background-color: #007bff; /* Blue button background */
-    color: white; /* White text on the button */
-    border: none; /* Remove border */
-    border-radius: 8px; /* Make the button corners slightly more rounded */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  /* Button hover effect */
-  .card-benefits .btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    transform: scale(1.05); /* Slightly enlarge the button on hover */
-  }
-  
+/* Title styling */
+h1 {
+  font-size: 3rem;  /* Large font size */
+  font-weight: bold;  /* Bold text */
+  color: #000000;  /* Black text color */
+  text-align: center;  /* Center align the title */
+  margin-bottom: 30px;  /* Add spacing below the title */
+}
+
+/* Enhanced Navbar Styling */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  background-color: #000000; /* Black background for the navbar */
+  border-radius: 0; /* Removed rounded corners for a flat navbar */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Soft shadow */
+  margin-bottom: 0; /* Removed the space below the navbar */
+  padding: 8px;
+  position: relative; /* Added positioning to enable line effects */
+  border-bottom: none; /* Removed the line below navbar */
+}
+
+/* Navbar Tab Styling */
+.nav-tabs .nav-item {
+  margin: 0; /* Removed the spacing between items */
+}
+
+/* Navbar Links */
+.nav-tabs .nav-link {
+  padding: 10px 20px; /* Adjusted padding for a more compact and neat look */
+  font-size: 1.2rem; /* Slightly larger font size */
+  font-weight: 600; /* Bold text for emphasis */
+  color: #ffffff; /* White text color */
+  background-color: transparent; /* Transparent background */
+  border: 2px solid transparent; /* Transparent border */
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 1px; /* Slightly increased spacing between letters */
+  position: relative; /* Enable positioning for underline effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* On hover, remove underline */
+.nav-tabs .nav-link:hover {
+  color: #ffffff; /* Keep white color */
+  border-color: transparent; /* Remove the border */
+  text-decoration: none; /* Remove any underline effect */
+}
+
+/* Active Tab Styling */
+.nav-tabs .nav-link.active {
+  color: #ffffff; /* White color for active tab */
+  border-bottom: none; /* Remove the active tab's bottom border */
+  font-weight: 600;
+}
+
+/* Card Styling */
+.card-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+/* Add hover effect to the card image */
+.card img {
+  width: 80%; /* Adjust image size */
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+/* When hovering, scale the image slightly */
+.card:hover img {
+  transform: scale(1.1); /* Slightly increase the size by 10% */
+}
+
+/* Card Benefits Styling */
+.card-benefits {
+  margin-left: 30px; /* Increase the margin on the left for better spacing */
+  width: 50%; /* Increase the width to make the block bigger */
+  padding: 25px; /* Increase padding for more space inside the block */
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 10px; /* Rounded corners for the block */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for better contrast */
+}
+
+/* Heading inside Card Benefits */
+.card-benefits h6 {
+  font-size: 1.4rem; /* Increase the font size for better visibility */
+  font-weight: bold;
+  color: #007bff; /* Blue color for headings */
+  margin-bottom: 15px; /* Add some space below the heading */
+}
+
+/* List inside Card Benefits */
+.card-benefits ul {
+  padding-left: 20px;
+}
+
+/* List items inside Card Benefits */
+.card-benefits ul li {
+  margin-bottom: 12px; /* More space between list items */
+  font-size: 1.1rem; /* Increase font size for better readability */
+  color: #333; /* Darker text color for readability */
+}
+
+/* Button inside Card Benefits */
+.card-benefits .btn {
+  margin-top: 25px; /* More space at the top of the button */
+  padding: 12px 30px; /* Increase padding for a larger button */
+  font-size: 1.2rem; /* Increase font size for better readability */
+  background-color: #007bff; /* Blue button background */
+  color: white; /* White text on the button */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Make the button corners slightly more rounded */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.card-benefits .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.card {
+  --bs-card-border-width: 0;
+}
