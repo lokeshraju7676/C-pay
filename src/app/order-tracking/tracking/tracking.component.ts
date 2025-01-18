@@ -17,7 +17,8 @@ export class TrackingComponent {
     'IN_TRANSIT': 'In Transit',
     'DELIVERED': 'Delivered',
     'CANCELLED': 'Cancelled',
-    'PENDING': 'Pending'
+    'PENDING': 'Pending',
+    'COMPLETED': 'Completed' // Added Completed status
   };
 
   constructor(private creditCardService: CreditCardApplicationService) { }
@@ -61,6 +62,7 @@ export class TrackingComponent {
       'DISPATCHED': 2,
       'IN_TRANSIT': 3,
       'DELIVERED': 4,
+      'COMPLETED': 4,  // Completed status should fill progress bar completely
       'CANCELLED': 0
     };
 
@@ -70,5 +72,13 @@ export class TrackingComponent {
   // Function to get the display name of the order status
   getOrderStatusDisplayName(status: string): string {
     return this.orderStatusDisplayNames[status] || status; // Fallback to status if not mapped
+  }
+
+  // Function to calculate the width of the progress bar based on order status
+  getProgressWidth(): string {
+    if (this.orderDetails.orderStatus === 'COMPLETED') {
+      return '100%'; // Full width for completed orders
+    }
+    return (this.currentStep / 4) * 100 + '%'; // Otherwise, calculate based on step
   }
 }

@@ -19,4 +19,9 @@ export class AdminDashboardComponent {
   goToCustomerDetails() {
     this.router.navigate(['/customerdetails']);
   }
+
+  // Method to navigate to the Track Order page
+  goToTrackOrder(): void {
+    this.router.navigate(['/ordertrackingdetails']); // Replace '/track-order' with the actual route if different
+  }
 }
