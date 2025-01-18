@@ -121,3 +121,20 @@ h2 {
     max-width: 100%;
   }
 }
+
+/* Progress bar color changes */
+.progress-bar.bg-success {
+  background-color: #28a745 !important; /* Green color for completed status */
+}
+
+.progress-bar.bg-light {
+  background-color: #f0ad4e !important; /* Light orange for Pending status */
+}
+
+.progress-bar.bg-info {
+  background-color: #17a2b8 !important; /* Blue color for In-Transit status */
+}
+
+.progress-bar.bg-warning {
+  background-color: #ffc107 !important; /* Yellow for Dispatched status */
+}

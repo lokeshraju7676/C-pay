@@ -20,7 +20,6 @@
     <p><strong>Delivery Date:</strong> {{ orderDetails.deliveryDate | date }}</p>
     <p><strong>Order Status:</strong> {{ getOrderStatusDisplayName(orderDetails.orderStatus) }}</p>
     <p><strong>Order Date:</strong> {{ orderDetails.orderDate | date }}</p>
-    <!-- <p><strong>Application ID:</strong> {{ orderDetails.applicationId }}</p> -->
   </div>
 
   <!-- Progress Bar Container -->
@@ -31,13 +30,13 @@
         class="progress-bar"
         role="progressbar"
         [ngClass]="{
-          'bg-success': currentStep === 4,
+          'bg-success': currentStep === 4 || orderDetails.orderStatus === 'COMPLETED',
           'bg-warning': currentStep === 3,
           'bg-info': currentStep === 2,
           'bg-light': currentStep <= 1
         }"
-        [style.width]="(currentStep / 4) * 100 + '%'">
-        <!-- Progress Bar Width based on Step -->
+        [style.width]="getProgressWidth()">
+        <!-- Progress Bar Width based on Step or Fully Green for Completed -->
       </div>
     </div>
     <div class="d-flex justify-content-between">

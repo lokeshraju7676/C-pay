@@ -34,6 +34,7 @@ import { UserDetailsComponent } from './dashboard/user-details/user-details.comp
 import { RewardsComponent } from './dashboard/rewards/rewards.component';
 import { CreditCardServiceComponent } from './pages/credit-card-service/credit-card-service.component';
 import { TrackingComponent } from './order-tracking/tracking/tracking.component';
+import { OrderTrackingDetailsComponent } from './dashboard/ordertrackingdetails/ordertrackingdetails.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { TrackingComponent } from './order-tracking/tracking/tracking.component'
     UserDetailsComponent,
     RewardsComponent,
     CreditCardServiceComponent,
+    OrderTrackingDetailsComponent,
   ],
   imports: [
     BrowserModule,  // Includes CommonModule

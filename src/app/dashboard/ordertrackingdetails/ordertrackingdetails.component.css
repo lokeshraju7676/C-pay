@@ -1,0 +1,21 @@
+/* ordertrackingdetails.component.css */
+
+.order-tracking-container {
+    margin: 20px;
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
+  .loading-spinner,
+  .error-message {
+    margin: 20px 0;
+  }
+  
+  .loading-spinner p,
+  .error-message p {
+    font-size: 16px;
+    color: #ff0000;
+  }
+  

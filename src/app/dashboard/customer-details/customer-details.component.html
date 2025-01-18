@@ -1,24 +1,96 @@
 <app-customer-navbar></app-customer-navbar>
-<main class="dashboard-main" style="background-color: rgba(139, 139, 139, 0.347); margin-top: 100px; padding-top: 20px; margin-left: 30px; margin-right: 30px; border-radius: 9px; padding: 20px;">
+
+<main class="dashboard-main"
+    style="background-color: rgba(139, 139, 139, 0.347);
+           margin-top: 100px; padding-top: 20px;
+           margin-left: 30px; margin-right: 30px;
+           border-radius: 9px; padding: 20px;">
 
     <!-- Back to Dashboard Button -->
     <div class="back-button-container">
-      <button class="back-button" (click)="goBackToDashboard()" style=" margin-bottom: 20px;">Back to Dashboard</button>
+        <button class="back-button" (click)="goBackToDashboard()" style="margin-bottom: 20px;">
+            Back to Dashboard
+        </button>
     </div>
-  
-    <!-- Customer Details Section -->
-    <div class="customer-details" style="transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37); border-radius: 10px;">
-    
-      <ul>
-        <li *ngFor="let customer of customerList" style="list-style: none;">
-          <div class="customer-item">
-            <h4 style="font-weight: 600;">{{ customer.name }} - {{ customer.status }}</h4>
-            <button *ngIf="customer.status !== 'Blocked'" (click)="blockCustomer(customer.id)" style="background-color: rgba(0, 0, 0, 0.482);">Block</button>
-          </div>
-        </li>
-      </ul>
+
+    <!-- Customer List Table -->
+    <div class="customer-details"
+        style="transition: transform 0.3s ease, box-shadow 0.3s ease;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37); border-radius: 10px;">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of customerList">
+                    <td>{{ customer.id || 'N/A' }}</td>
+                    <td>{{ customer.username || 'No Name Available' }}</td>
+                    <td>{{ customer.email || 'N/A' }}</td>
+                    <td>{{ customer.mobile || 'No Mobile Available' }}</td>
+                    <td>{{ customer.gender || 'N/A' }}</td>
+                    <td>{{ customer.address || 'No Address Available' }}</td>
+                    <td>
+                        <!-- <button (click)="viewCustomer(customer.id)" class="btn btn-info">View</button> -->
+                        <button (click)="editCustomer(customer)" class="btn btn-warning">Edit</button>
+                        <button (click)="confirmDelete(customer)" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    
-  </main>
-  
+
+    <!-- Edit Form - Only Shown When Editing -->
+    <div *ngIf="editingCustomer" class="edit-form-container"
+        style="margin-top: 20px; padding: 20px; border-radius: 10px; background-color: white; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">
+
+        <h3>Edit Customer</h3>
+        <form (ngSubmit)="updateCustomer()">
+            <div class="mb-3">
+                <label>Name:</label>
+                <input type="text" [(ngModel)]="editingCustomer.username" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Email:</label>
+                <input type="email" [(ngModel)]="editingCustomer.email" name="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Mobile:</label>
+                <input type="text" [(ngModel)]="editingCustomer.mobile" name="mobile" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Gender:</label>
+                <select [(ngModel)]="editingCustomer.gender" name="gender" class="form-control" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label>Address:</label>
+                <input type="text" [(ngModel)]="editingCustomer.address" name="address" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Save Changes</button>
+            <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div *ngIf="deletingCustomer" class="delete-modal">
+        <div class="modal-content">
+            <h4>Confirm Deletion</h4>
+            <p>Are you sure you want to delete <b>{{ deletingCustomer.username }}</b>?</p>
+            <button class="btn btn-danger" (click)="deleteCustomer(deletingCustomer.id)">Yes, Delete</button>
+            <button class="btn btn-secondary" (click)="cancelDelete()">Cancel</button>
+        </div>
+    </div>
+
+</main>
