@@ -1,0 +1,140 @@
+.tracking-container {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fafafa;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-form-container,
+.order-details-container,
+.progress-bar-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.input-form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-form-container label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-form-container input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-form-container input:focus {
+  border-color: #6c757d;
+  outline: none;
+}
+
+.input-form-container button {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.input-form-container button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.input-form-container button:hover:not([disabled]) {
+  background-color: #5a6268;
+}
+
+.order-details-container h3,
+.progress-bar-container h3 {
+  text-align: center;
+  color: #333;
+}
+
+.progress {
+  height: 30px;
+  margin-top: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  line-height: 30px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.d-flex {
+  margin-top: 10px;
+  justify-content: space-between;
+}
+
+.d-flex span {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .tracking-container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .input-form-container,
+  .order-details-container,
+  .progress-bar-container {
+    padding: 15px;
+  }
+
+  .input-form-container input,
+  .input-form-container button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Progress bar color changes */
+.progress-bar.bg-success {
+  background-color: #28a745 !important; /* Green color for completed status */
+}
+
+.progress-bar.bg-light {
+  background-color: #f0ad4e !important; /* Light orange for Pending status */
+}
+
+.progress-bar.bg-info {
+  background-color: #17a2b8 !important; /* Blue color for In-Transit status */
+}
+
+.progress-bar.bg-warning {
+  background-color: #ffc107 !important; /* Yellow for Dispatched status */
+}

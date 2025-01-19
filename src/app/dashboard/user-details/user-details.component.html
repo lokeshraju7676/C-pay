@@ -1,41 +1,41 @@
 <app-customer-navbar></app-customer-navbar>
+
 <div class="user-details-card" style="margin-top: 100px; width: 50%;">
-    <div class="profile-section">
-      <div class="profile-avatar">
-        <img src="assets/img/profile-picture.png" alt="Profile Picture" />
-      </div>
-      <div class="profile-info">
-        <h2>John Doe</h2>
-        <p class="username">{{user.username}}</p>
-      </div>
+  <div class="profile-section">
+    <div class="profile-avatar">
+      <img src="assets/img/profile-picture.png" alt="Profile Picture" />
     </div>
-  
-    <div class="details-section">
-      <div class="detail">
-        <span class="detail-label">ID:</span>
-        <span class="detail-value">12345</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">Mobile:</span>
-        <span class="detail-value">+1234567890</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">Email:</span>
-        <span class="detail-value">{{ user.email }}</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">Gender:</span>
-        <span class="detail-value">Male</span>
-      </div>
-      <div class="detail">
-        <span class="detail-label">Address:</span>
-        <span class="detail-value">123 Main St, City, Country</span>
-      </div>
-    </div>
-  
-    <!-- Back to Dashboard Button -->
-    <div class="back-to-dashboard">
-      <button (click)="goBackToDashboard()">Back to Dashboard</button>
+    <div class="profile-info">
+      <h2>{{ user?.username }}</h2>
+      <p class="username">{{ user?.username }}</p>
     </div>
   </div>
-  
+
+  <div class="details-section">
+    <div class="detail">
+      <span class="detail-label">ID:</span>
+      <span class="detail-value">{{ user?.id }}</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Mobile:</span>
+      <span class="detail-value">{{ user?.mobile }}</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Email:</span>
+      <span class="detail-value">{{ user?.email }}</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Gender:</span>
+      <span class="detail-value">{{ user?.gender }}</span>
+    </div>
+    <div class="detail">
+      <span class="detail-label">Address:</span>
+      <span class="detail-value">{{ user?.address }}</span>
+    </div>
+  </div>
+
+  <!-- Back to Dashboard Button -->
+  <div class="back-to-dashboard">
+    <button (click)="goBackToDashboard()">Back to Dashboard</button>
+  </div>
+</div>

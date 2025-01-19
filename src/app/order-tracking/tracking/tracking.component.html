@@ -1,0 +1,51 @@
+<app-customer-navbar></app-customer-navbar>
+
+<!-- Track Container Box -->
+<div class="tracking-container">
+  <h2>Track Your Credit Card Order</h2>
+
+  <!-- Input Form Container -->
+  <div class="input-form-container">
+    <form (ngSubmit)="fetchOrderDetails()">
+      <label for="orderId">Order ID:</label>
+      <input type="text" id="orderId" [(ngModel)]="orderId" name="orderId" required />
+      <button type="submit" [disabled]="!orderId">Track</button>
+    </form>
+  </div>
+
+  <!-- Order Details Container -->
+  <div *ngIf="orderDetails" class="order-details-container">
+    <h3>Order Details</h3>
+    <p><strong>Order ID:</strong> {{ orderDetails.orderId }}</p>
+    <p><strong>Delivery Date:</strong> {{ orderDetails.deliveryDate | date }}</p>
+    <p><strong>Order Status:</strong> {{ getOrderStatusDisplayName(orderDetails.orderStatus) }}</p>
+    <p><strong>Order Date:</strong> {{ orderDetails.orderDate | date }}</p>
+  </div>
+
+  <!-- Progress Bar Container -->
+  <div *ngIf="orderDetails" class="progress-bar-container">
+    <h3>Order Progress</h3>
+    <div class="progress">
+      <div
+        class="progress-bar"
+        role="progressbar"
+        [ngClass]="{
+          'bg-success': currentStep === 4 || orderDetails.orderStatus === 'COMPLETED',
+          'bg-warning': currentStep === 3,
+          'bg-info': currentStep === 2,
+          'bg-light': currentStep <= 1
+        }"
+        [style.width]="getProgressWidth()">
+        <!-- Progress Bar Width based on Step or Fully Green for Completed -->
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <span>Pending</span>
+      <span>Dispatched</span>
+      <span>In Transit</span>
+      <span>Delivered</span>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

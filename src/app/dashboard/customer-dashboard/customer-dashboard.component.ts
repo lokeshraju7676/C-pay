@@ -24,4 +24,8 @@ this.router.navigate(['./userdetails']);
     this.adminName = this.authService.getAdminName();  // Get the name of the logged-in user
   }
   
+
+  gotrack(){
+    this.router.navigate(['/tracking']);
+  }
 }

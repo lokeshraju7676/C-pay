@@ -1,0 +1,126 @@
+/* Ensures that the form container takes the full height of the viewport */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;  /* Light background for the whole page */
+}
+
+/* Centers the form box both vertically and horizontally */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full viewport height */
+  padding: 20px; /* Padding to avoid edges */
+  box-sizing: border-box;
+  flex-direction: column; /* Stack elements vertically */
+  margin-top: 10px; /* Optional, to adjust the top space */
+  margin-bottom: 10px; /* Optional, to adjust the bottom space */
+}
+
+/* This class defines the actual form box, adds a background color, padding, and a box shadow */
+.form-box {
+  width: 100%;
+  max-width: 500px;  /* Controls the max width of the form box */
+  background-color: #ffffff; /* White background for the form */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: box-shadow 0.3s ease;  /* Smooth transition for shadow */
+  margin-top: 10px;  /* Top margin for spacing inside the container */
+}
+
+/* Form box hover effect */
+.form-box:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Form control styles (spacing and input appearance) */
+.form-control {
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding does not affect width */
+  margin-top: 5px; /* Add some space between label and input */
+}
+
+/* Focus effect on form fields */
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Styling the submit button */
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 20px; /* Adding space above button */
+}
+
+/* Hover effect for the button */
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the form title */
+h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;  /* Space below the title */
+  font-weight: 600;
+}
+
+/* Margin for form elements */
+.mb-3 {
+  margin-bottom: 1.5rem;
+}
+
+/* Center the submit button horizontally */
+.d-flex {
+  justify-content: center;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 576px) {
+  .form-box {
+    padding: 20px;
+    max-width: 90%; /* Form width is reduced for mobile */
+  }
+
+  .btn {
+    font-size: 14px;
+  }
+}
+.form-box[_ngcontent-ng-c394768593] {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 21px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  margin-top: 300px;
+}
+
+.form-container[_ngcontent-ng-c394768593] {
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 60px;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 250px;
+}

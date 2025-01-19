@@ -1,0 +1,115 @@
+<app-navbar></app-navbar>
+
+<!-- Container for the whole layout -->
+<div class="layout-container">
+  <!-- "Our Credit Cards" Title -->
+  <h2 class="card-title text-center mb-4">Credit Cards</h2>
+
+  <!-- Horizontal Navbar for card tabs -->
+  <ul class="nav nav-tabs" id="cardTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <a class="nav-link active" id="bronze-tab" data-bs-toggle="pill" href="#bronze" role="tab" aria-controls="bronze" aria-selected="true">Bronze Card</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="silver-tab" data-bs-toggle="pill" href="#silver" role="tab" aria-controls="silver" aria-selected="false">Silver Card</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="gold-tab" data-bs-toggle="pill" href="#gold" role="tab" aria-controls="gold" aria-selected="false">Gold Card</a>
+    </li>
+    <li class="nav-item" role="presentation">
+      <a class="nav-link" id="platinum-tab" data-bs-toggle="pill" href="#platinum" role="tab" aria-controls="platinum" aria-selected="false">Platinum Card</a>
+    </li>
+  </ul>
+
+  <!-- Tab content displaying the credit card details -->
+  <div class="card-container">
+    <div class="tab-content mt-4" id="cardTabsContent">
+      <!-- Bronze Card Content -->
+      <div class="tab-pane fade show active" id="bronze" role="tabpanel" aria-labelledby="bronze-tab">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-details">
+              <img src="assets/img/new1.jpg" class="card-img-top" alt="Bronze Card" />
+            </div>
+            <div class="card-benefits">
+              <h6>Card Benefits</h6>
+              <ul>
+                <li>Credit Limit: ₹50,000</li>
+                <li>0% interest for 6 months</li>
+                <li>Exclusive partner discounts</li>
+                <li>24/7 customer support</li>
+              </ul>
+              <button class="btn btn-primary btn-sm" (click)="applyNow()">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Silver Card Content -->
+      <div class="tab-pane fade" id="silver" role="tabpanel" aria-labelledby="silver-tab">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-details">
+              <img src="assets/img/new2.jpg" class="card-img-top" alt="Silver Card" />
+            </div>
+            <div class="card-benefits">
+              <h6>Card Benefits</h6>
+              <ul>
+                <li>Credit Limit: ₹50,000</li>
+                <li>0% interest on all purchases for the first 6 months</li>
+                <li>Earn rewards on every purchase</li>
+                <li>Exclusive discounts with partner brands</li>
+              </ul>
+              <button class="btn btn-primary btn-sm" (click)="applyNow()">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gold Card Content -->
+      <div class="tab-pane fade" id="gold" role="tabpanel" aria-labelledby="gold-tab">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-details">
+              <img src="assets/img/new.jpg" class="card-img-top" alt="Gold Card" />
+            </div>
+            <div class="card-benefits">
+              <h6>Card Benefits</h6>
+              <ul>
+                <li>Credit Limit: ₹100,000</li>
+                <li>Earn cashback on everyday purchases</li>
+                <li>Collect points for every transaction</li>
+                <li>Access special offers and discounts</li>
+              </ul>
+              <button class="btn btn-primary btn-sm" (click)="applyNow()">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Platinum Card Content -->
+      <div class="tab-pane fade" id="platinum" role="tabpanel" aria-labelledby="platinum-tab">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-details">
+              <img src="assets/img/4th.jpg" class="card-img-top" alt="Platinum Card" />
+            </div>
+            <div class="card-benefits">
+              <h6>Card Benefits</h6>
+              <ul>
+                <li>Credit Limit: ₹1,000,000</li>
+                <li>Exclusive access to luxury events</li>
+                <li>Earn VIP rewards and status upgrades</li>
+                <li>Free lounge access at airports worldwide</li>
+              </ul>
+              <button class="btn btn-primary btn-sm" (click)="applyNow()">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+d

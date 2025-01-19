@@ -26,14 +26,15 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { CreditCardApplicationComponent } from './credit-card-application/credit-card-application.component';
-import { CardServicesComponent } from './pages/card-services/card-services.component';
-import { OrderTrackingComponent } from './ordertracking/ordertracking.component';
 import { CustomerDashboardComponent } from './dashboard/customer-dashboard/customer-dashboard.component';
 import { CustomerNavbarComponent } from './dashboard/customer-navbar/customer-navbar.component';
 import { AdminDashboardComponent } from './dashboard/admin-dashboard/admin-dashboard.component';
 import { CustomerDetailsComponent } from './dashboard/customer-details/customer-details.component';
 import { UserDetailsComponent } from './dashboard/user-details/user-details.component';
 import { RewardsComponent } from './dashboard/rewards/rewards.component';
+import { CreditCardServiceComponent } from './pages/credit-card-service/credit-card-service.component';
+import { TrackingComponent } from './order-tracking/tracking/tracking.component';
+import { OrderTrackingDetailsComponent } from './dashboard/ordertrackingdetails/ordertrackingdetails.component';
 
 @NgModule({
   declarations: [
@@ -47,14 +48,15 @@ import { RewardsComponent } from './dashboard/rewards/rewards.component';
     RegisterComponent,
     AdminDashboardComponent,
     CreditCardApplicationComponent,
-    CardServicesComponent,
-    OrderTrackingComponent,
+    TrackingComponent,
     CustomerDashboardComponent,
     CustomerNavbarComponent,
     AdminDashboardComponent,
     CustomerDetailsComponent,
     UserDetailsComponent,
     RewardsComponent,
+    CreditCardServiceComponent,
+    OrderTrackingDetailsComponent,
   ],
   imports: [
     BrowserModule,  // Includes CommonModule

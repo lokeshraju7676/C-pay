@@ -1,0 +1,112 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.container {
+    margin-top: 30px;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 30px;
+}
+
+/* Center the panel */
+.panel {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Center the panel heading */
+.panel-heading {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Center the images inside the panel */
+.inlineimage {
+    text-align: center; /* Center the images */
+    margin-bottom: 20px; /* Space below the images */
+}
+
+/* Styling for images */
+.images {
+    display: inline-block;
+    max-width: 22%;
+    margin: 1%; /* Add margin between images */
+    height: auto;
+}
+
+/* Panel body styling */
+.panel-body {
+    padding: 20px;
+}
+
+/* Form input styling */
+.form-group label {
+    font-weight: bold;
+}
+
+/* Form input field */
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Input group styling */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button styling */
+.btn-success {
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+/* Footer styling */
+app-footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Responsive styling */
+@media (max-width: 767px) {
+    .panel {
+        margin: 0 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .col-xs-12 {
+        width: 100%;
+    }
+
+    .col-md-8 {
+        width: 100%;
+    }
+}
