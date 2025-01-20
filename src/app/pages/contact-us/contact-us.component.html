@@ -1,49 +1,188 @@
-  <app-navbar></app-navbar>
-  <!-- Contact Us Section -->
-  <div class="contact-us">
-    <h2>Contact Us</h2>
-  
-    <p>We'd love to hear from you! If you have any questions or need support, feel free to reach out to us through the following contact methods:</p>
-  
-    <div class="contact-info">
-      <h3>Our Contact Information</h3>
-      <p><strong>Email:</strong> support"&#64;".com</p>
-      <p><strong>Phone:</strong> +91 6905633481</p>
-      <p><strong>Address:</strong> #420 RR nagar near pattangere shed Bangalore 560098</p>
-    </div>
-  
-    <div class="contact-form">
-      <h3>Send Us a Message</h3>
-      <form action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
-    </div>
-  
-    <!-- OpenStreetMap Integration with Click-to-Open in Fullscreen and Directions -->
-    <div class="contact-map">
-      <h3>Our Location</h3>
-      
-      <!-- The map will open in a new tab with Directions functionality -->
-      <a href="https://www.openstreetmap.org/directions?mlat=12.9157&mlon=77.5394#map=16/12.9157/77.5394" target="_blank">
-        <!-- Updated iframe with better zoom level -->
-        <iframe 
-          src="https://www.openstreetmap.org/export/embed.html?bbox=77.5367%2C12.9129%2C77.5422%2C12.9186&layer=mapnik&marker=12.9157%2C77.5394"
-          width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen>
-        </iframe>
-      </a>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
 
-<app-footer></app-footer>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Styling for the Contact Us Form */
+        .container {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header-title {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            border-radius: 4px;
+            border: 1px solid #EDEDED;
+            padding: 10px;
+            box-shadow: none;
+        }
+
+        .form-control:focus {
+            border: 1px solid #333;
+        }
+
+        .btn-send {
+            border-radius: 4px;
+            border: 1px solid #333;
+            background: #333;
+            color: #fff;
+            padding: 12px 24px;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn-send:hover {
+            background: #fff;
+            color: #333;
+            border: 1px solid #333;
+        }
+
+        #successMessage {
+            display: block;
+            margin-top: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* Optional responsiveness for smaller screens */
+        @media only screen and (max-width: 768px) {
+            .btn-send {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container animated fadeIn">
+        <div class="row">
+            <h1 class="header-title">Contact Us</h1>
+            <hr>
+            <div class="col-sm-12" id="parent">
+                <div class="col-sm-6">
+                    <!-- Google Map Embed -->
+                    <iframe width="100%" height="320px;" frameborder="0" style="border:0"
+                        src="https://www.google.com/maps/embed/v1/place?q=13.0388068,77.4791204&key=AIzaSyAf64FepFyUGZd3WFWhZzisswVx2K37RFY"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="col-sm-6">
+                    <!-- Contact Form -->
+                    <form id="contactForm" class="contact-form" (ngSubmit)="onSubmit($event)">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" name="nm" placeholder="Name" required="" autofocus="">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" name="em" placeholder="Email" required=""/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="phone" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" placeholder="Mobile No." required=""/>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment" name="FB" placeholder="Type Your Message/Feedback here..." required=""></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default btn-send">
+                                <span class="glyphicon glyphicon-send"></span> Send
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message (Initially Hidden) -->
+                    <div *ngIf="formSubmitted" id="successMessage" class="alert alert-success">
+                        <strong></strong> Your message has been sent successfully.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="container second-portion">
+            <div class="row">
+                <!-- Mail & Website -->
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">MAIL & WEBSITE</h3>
+                            <p>
+                                <i class="fa fa-envelope" aria-hidden="true"></i> renukaswamy96"&#64;"gmail.com
+                                <br><br>
+                                <i class="fa fa-globe" aria-hidden="true"></i> darshan69"&#64;"gmail.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-mobile" aria-hidden="true"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">CONTACT</h3>
+                            <p>
+                                <i class="fa fa-mobile" aria-hidden="true"></i> (+91)9624696912
+                                <br><br>
+                                <i class="fa fa-mobile" aria-hidden="true"></i> (+91)7567066101
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="col-xs-12 col-sm-6 col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div class="info">
+                            <h3 class="title">ADDRESS</h3>
+                            <p>
+                                <i class="fa fa-map-marker" aria-hidden="true"></i> Doddabidarakallu, Bengaluru, Karnataka 560073, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
