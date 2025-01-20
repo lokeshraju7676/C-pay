@@ -1,70 +1,109 @@
-/* Navbar Styles */
-.navbar {
-    background-color: #343a40; /* Dark background for the navbar */
-    padding: 10px 0;
-  }
-  
-  .navbar .navbar-brand img {
-    margin-right: 8px;
-    border-radius: 50%;
-  }
-  
-  /* Make navbar text white */
-  .navbar-brand {
-    color: white !important;
-  }
-  
-  /* Ensure text color remains white in the collapsed state on smaller screens */
-  .navbar-nav .nav-link {
-    color: white !important;
-  }
-  
-  /* If you want the text in the dropdown menu items to also be white */
-  .navbar-nav .nav-item .dropdown-menu .dropdown-item {
-    color: white !important;
-  }
-  
-  /* Separator Line after Navbar */
-  .navbar-separator {
-    margin-top: 20px;
-    border: 0;
-    border-top: 2px solid #007BFF;
-  }
-  
-  /* About Us Section Styling */
-  .about-us {
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    color: #333;
-  }
-  
-  .about-us h2 {
-    text-align: center;
-    color: #007BFF;
-    margin-bottom: 20px;
-    font-size: 2em;
-  }
-  
-  .about-us p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-  }
-  
-  .about-us ul {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .about-us ul li {
-    margin-bottom: 10px;
-  }
-  
-  .about-us strong {
-    color: #007BFF;
-  }
-  
+body {
+  font-family: 'Roboto'; font-size: 16px;
+}
+
+.aboutus-section {
+  padding: 90px 0;
+}
+
+.aboutus-title {
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: 32px;
+  margin: 0 0 39px;
+  padding: 0 0 11px;
+  position: relative;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.aboutus-title::after {
+  background: #fdb801 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 54px;
+}
+
+.aboutus-text {
+  color: #606060;
+  font-size: 13px;
+  line-height: 22px;
+  margin: 0 0 35px;
+}
+
+a:hover, a:active {
+  color: #ffb901;
+  text-decoration: none;
+  outline: 0;
+}
+
+.aboutus-more {
+  border: 1px solid #fdb801;
+  border-radius: 25px;
+  color: #fdb801;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 7px 20px;
+  text-transform: uppercase;
+}
+
+.feature .feature-box .iconset {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  position: relative;
+  width: 18%;
+}
+
+.feature .feature-box .iconset::after {
+  background: #fdb801 none repeat scroll 0 0;
+  content: "";
+  height: 150%;
+  left: 43%;
+  position: absolute;
+  top: 100%;
+  width: 1px;
+}
+
+.feature .feature-box .feature-content h4 {
+  color: #0f0f0f;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 22px;
+  margin: 0 0 5px;
+}
+
+.feature .feature-box .feature-content {
+  float: left;
+  padding-left: 28px;
+  width: 78%;
+}
+
+.feature .feature-box .feature-content p {
+  color: #606060;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.icon {
+  color: #f4b841;
+  padding: 0px;
+  font-size: 40px;
+  border: 1px solid #fdb801;
+  border-radius: 100px;
+  color: #fdb801;
+  font-size: 28px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  width: 70px;
+}
+.aboutus-banner img {
+  width: 100%;  /* Makes the image responsive */
+  max-width: 300px;  /* Restricts the image size to a maximum width */
+  height: auto;  /* Maintains the aspect ratio */
+}

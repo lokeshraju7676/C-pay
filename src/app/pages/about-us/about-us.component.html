@@ -1,28 +1,85 @@
-<app-navbar></app-navbar>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cpay</title>
 
-  <!-- About Us Section -->
-  <div class="about-us">
-    <h2>About Us</h2>
-    <p><strong>Who We Are:</strong> Cpay is a cutting-edge credit card application designed to revolutionize the way you manage your finances. Our platform combines advanced technology with a user-friendly interface to provide a seamless, secure, and efficient experience for all your credit card needs.</p>
-  
-    <p><strong>Our Mission:</strong> At Cpay, our mission is to empower individuals and businesses to take full control of their financial well-being. We aim to simplify credit management, enhance financial literacy, and provide tools that foster smarter financial decisions.</p>
-  
-    <p><strong>What We Offer:</strong></p>
-    <ul>
-      <li>Smart Financial Tools: Real-time spending insights, transaction categorization, and budgeting tools.</li>
-      <li>Security: Advanced encryption and fraud detection mechanisms to protect your data.</li>
-      <li>Flexibility: Manage multiple credit cards in one place, schedule payments, and set up alerts.</li>
-      <li>Rewards and Benefits: Access exclusive offers, cashback programs, and personalized rewards.</li>
-    </ul>
-  
-    <p><strong>Our Vision:</strong> We envision a world where managing credit is effortless and stress-free. Cpay is committed to innovating and delivering top-notch services that adapt to the ever-evolving financial landscape.</p>
-  
-    <p><strong>Why Choose Cpay?</strong></p>
-    <ul>
-      <li>Transparency and trust at the core of everything we do.</li>
-      <li>A dedicated team working to enhance your financial journey.</li>
-      <li>24/7 customer support to assist with all your needs.</li>
-    </ul>
-  </div>
+    <!-- Include Bootstrap and Google Fonts -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
-<app-footer></app-footer>
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="about-us.component.css"> <!-- Include the custom CSS file -->
+</head>
+<body>
+    <!-- About Us Section -->
+    <div class="aboutus-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="aboutus">
+                        <h2 class="aboutus-title">About Us</h2>
+                        <p class="aboutus-text">
+                            Cpay is a cutting-edge credit card management platform that helps individuals and businesses manage their finances efficiently.
+                            We provide advanced tools to track spending, secure payment management, and financial insights in one easy-to-use platform.
+                        </p>
+                        <p class="aboutus-text">
+                            At Cpay, we strive to make financial management easier, smarter, and more secure. Whether you are managing multiple credit cards or looking for budgeting tools, we have got you covered.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- About Us Image -->
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="aboutus-banner">
+                        <img src="assets/img/about us.jpg" alt="About Us Image">
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="col-md-5 col-sm-6 col-xs-12">
+                    <div class="feature">
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-cog icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Smart Financial Tools</h4>
+                                    <p>Real-time spending insights, transaction categorization, and budgeting tools to help you stay on top of your finances.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-lock icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Top-Notch Security</h4>
+                                    <p>Our platform utilizes advanced encryption and fraud detection mechanisms to protect your data and provide a secure experience.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <div class="clearfix">
+                                <div class="iconset">
+                                    <span class="glyphicon glyphicon-heart icon"></span>
+                                </div>
+                                <div class="feature-content">
+                                    <h4>Customer Support</h4>
+                                    <p>We offer 24/7 customer support to ensure that all your questions are answered and issues resolved promptly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
