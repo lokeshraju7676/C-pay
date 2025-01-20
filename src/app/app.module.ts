@@ -38,6 +38,7 @@ import { OrderTrackingDetailsComponent } from './dashboard/ordertrackingdetails/
 import { PaymentComponent } from './payment/payment.component';
 import { PaymentSuccessComponent } from './payment-success/payment-success.component';
 import { CreditcardapplicationsComponent } from './dashboard/creditcardapplications/creditcardapplications.component';
+import { AdminNavbarComponent } from './dashboard/admin-navbar/admin-navbar.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { CreditcardapplicationsComponent } from './dashboard/creditcardapplicati
     OrderTrackingDetailsComponent,
     PaymentComponent,
     PaymentSuccessComponent,
-    CreditcardapplicationsComponent
+    CreditcardapplicationsComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,  // Includes CommonModule

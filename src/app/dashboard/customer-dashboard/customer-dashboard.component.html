@@ -8,7 +8,7 @@
         <span class="material-icons">person</span>
       </div>
       <div class="welcome-text">
-        <h1>Welcome back, John!</h1>
+        <h1>Welcome back, {{ userName }}!</h1>
         <p>Manage your cards and transactions</p>
       </div>
     </div>
@@ -22,7 +22,7 @@
       </div>
       <div class="action-content">
         <h3>User Details</h3>
-        <p>View and manage your credit cards</p>
+        <p>View and manage your details</p>
       </div>
       <span class="material-icons arrow">chevron_right</span>
     </div>
@@ -33,7 +33,7 @@
       </div>
       <div class="action-content" (click)="gotrack()">
         <h3>Track Order</h3>
-        <p>Track your spending</p>
+        <p>Track your order</p>
       </div>
       <span class="material-icons arrow">chevron_right</span>
     </div>
@@ -44,63 +44,76 @@
       </div>
       <div class="action-content">
         <h3>Rewards</h3>
-        <p>Check your reward points</p>
+        <p>Check our reward benefits</p>
       </div>
       <span class="material-icons arrow">chevron_right</span>
     </div>
 
     <!-- New Apply for Credit Card Section -->
+    <div class="action-card" (click)="goPayment()">
+      <div class="action-icon">
+        <span class="material-icons">credit_card</span>
+      </div>
+      <div class="action-content">
+        <h3>Payment</h3>
+        <p>Do seemless payments by our website</p>
+      </div>
+      <span class="material-icons arrow">chevron_right</span>
+    </div>
     <div class="action-card" (click)="goApplyCreditCard()">
       <div class="action-icon">
         <span class="material-icons">credit_card</span>
       </div>
       <div class="action-content">
         <h3>Apply for Credit Card</h3>
-        <p>Get a new credit card today</p>
+        <!-- <p>Checkout Our Amazing Card Offers</p> -->
       </div>
       <span class="material-icons arrow">chevron_right</span>
     </div>
+
+    
   </div>
 
   <!-- Recent Transactions -->
-  <div class="transactions-card">
-    <div class="card-header">
-      <h2>Recent Transactions</h2>
-    </div>
-    <div class="transactions-list">
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Amazon</p>
-          <p class="type">Shopping</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$99.99</p>
-          <p class="date">Mar 15, 2024</p>
-        </div>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Netflix</p>
-          <p class="type">Entertainment</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$14.99</p>
-          <p class="date">Mar 14, 2024</p>
-        </div>
-      </div>
-
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Starbucks</p>
-          <p class="type">Food & Drink</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$5.75</p>
-          <p class="date">Mar 13, 2024</p>
-        </div>
-      </div>
-      <!-- Repeat transaction items here... -->
-    </div>
+<div class="transactions-card">
+  <div class="card-header">
+    <h2>Recent Transactions</h2>
   </div>
+  <div class="transactions-list">
+    <div class="transaction-item">
+      <div class="transaction-info">
+        <p class="merchant">Amazon</p>
+        <p class="type">Shopping</p>
+      </div>
+      <div class="transaction-amount">
+        <p class="amount">₹8,299.17</p> <!-- Replaced $ with ₹ and converted amount -->
+        <p class="date">Jan 19, 2025</p>
+      </div>
+    </div>
+
+    <div class="transaction-item">
+      <div class="transaction-info">
+        <p class="merchant">Netflix</p>
+        <p class="type">Entertainment</p>
+      </div>
+      <div class="transaction-amount">
+        <p class="amount">₹1,244.17</p> 
+        <p class="date">Jan 14, 2025</p>
+      </div>
+    </div>
+
+    <div class="transaction-item">
+      <div class="transaction-info">
+        <p class="merchant">Starbucks</p>
+        <p class="type">Food & Drink</p>
+      </div>
+      <div class="transaction-amount">
+        <p class="amount">₹478.25</p> 
+        <p class="date">Dec 27, 2024</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
 </main>

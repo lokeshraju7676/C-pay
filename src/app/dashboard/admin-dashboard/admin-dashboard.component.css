@@ -126,7 +126,7 @@
   .transactions-card {
     background: var(--white);
     border-radius: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    
   }
   
   .card-header {
@@ -202,4 +202,27 @@
       padding: 1rem;
     }
   }
-  
+  /* Time Display */
+.time-display {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.time {
+  font-size: 2.5rem; /* Larger font size for time */
+  font-weight: bold;
+  color: var(--primary-color); /* Dark blue for emphasis */
+}
+
+/* Quote of the Day */
+.quote-of-the-day {
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.quote-of-the-day p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-color);
+}

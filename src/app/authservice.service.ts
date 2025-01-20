@@ -54,6 +54,17 @@ export class AuthService {
     return localStorage.getItem('username') || 'Admin';  // Default to 'Admin' if not found
   }
 
+  // This method assumes the user's name is stored in localStorage
+  getUserName(): string {
+    return localStorage.getItem('userName') || 'Guest';  // Default to 'Guest' if no name is stored
+  }
+
+   // This method can set the user's name when they log in
+   setUserName(name: string): void {
+    localStorage.setItem('userName', name);
+  }
+
+
   // Get Authorization headers with Bearer token
   private getAuthHeaders(): HttpHeaders {
     const token = localStorage.getItem('accessToken');

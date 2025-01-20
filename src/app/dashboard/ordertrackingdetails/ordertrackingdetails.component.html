@@ -1,37 +1,46 @@
-<div class="order-tracking-container">
-  <!-- Back to Admin Dashboard Button -->
-  <div class="text-center mb-3">
-    <button (click)="navigateToDashboard()" class="btn btn-info">Back to Admin Dashboard</button>
+<app-admin-navbar></app-admin-navbar>
+
+<main class="order-tracking-main"
+    style="background-color: rgba(139, 139, 139, 0.347); 
+           margin-top: 100px; padding: 20px; 
+           margin-left: 30px; margin-right: 30px;
+           border-radius: 9px; padding-top: 20px;">
+
+  <!-- Back to Dashboard Button -->
+  <div class="back-button-container">
+    <button class="back-button" (click)="navigateToDashboard()">
+      Back to Dashboard
+    </button>
   </div>
 
   <!-- Search Bar -->
-  <div class="search-bar text-center">
+  <div class="search-bar">
     <input
       type="text"
       class="form-control"
       [(ngModel)]="searchQuery"
       placeholder="Search by Order ID"
     />
-    <button (click)="searchApplicationDetails()" class="btn btn-primary mt-2">
+    <button (click)="searchApplicationDetails()" class="btn btn-primary" style="background: linear-gradient(80deg, #b63546, #ff4653)">
       Search Application
     </button>
   </div>
 
-  <!-- Show Loading Spinner while fetching data -->
+  <!-- Loading Spinner -->
   <div *ngIf="loading" class="loading-spinner text-center">
     <p>Loading order details...</p>
   </div>
 
-  <!-- Show Error Message if fetching data fails -->
+  <!-- Error Message -->
   <div *ngIf="errorMessage" class="error-message text-center">
     <p>{{ errorMessage }}</p>
   </div>
 
-  <!-- Show Application Details if found and the overlay is active -->
+  <!-- Application Details Overlay -->
   <div *ngIf="applicationDetails && !loading && !errorMessage" class="overlay">
     <div class="overlay-content">
       <h3>Application Details</h3>
-      <table class="table table-bordered table-striped table-responsive-sm">
+      <table class="table table-bordered table-striped">
         <thead>
           <tr>
             <th>Applicant Name</th>
@@ -53,45 +62,40 @@
           </tr>
         </tbody>
       </table>
-
-      <!-- Button to reset and show order details again -->
-      <button (click)="resetView()" class="btn btn-secondary mt-2">
-        Back to Order Details
-      </button>
+      <button (click)="resetView()" class="btn btn-secondary">Back to Order Details</button>
     </div>
   </div>
 
-  <!-- Show Order Tracking Data if available -->
-  <div *ngIf="showOrderDetails && !loading && !errorMessage">
-    <table class="table table-bordered table-striped table-responsive-sm">
-      <thead>
-        <tr>
-          <th>Order ID</th>
-          <th>Order Status</th>
-          <th>Order Date</th>
-          <th>Delivery Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let order of orderTrackingList">
-          <td>{{ order.orderId }}</td>
-
-          <!-- Dropdown to select and update the order status -->
-          <td>
-            <select [(ngModel)]="order.orderStatus" (change)="updateOrderStatus(order)">
-              <option value="PENDING">Pending</option>
-              <option value="DISPATCHED">Dispatched</option>
-              <option value="IN_TRANSIT">In Transit</option>
-              <option value="DELIVERED">Delivered</option>
-              <option value="CANCELLED">Cancelled</option>
-              <option value="COMPLETED">Completed</option>
-            </select>
-          </td>
-
-          <td>{{ order.orderDate | date }}</td>
-          <td>{{ order.deliveryDate ? (order.deliveryDate | date) : 'Not yet dispatched' }}</td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- Order Tracking Data -->
+  <div *ngIf="showOrderDetails && !loading && !errorMessage" class="order-details-container">
+    <div class="order-tracking-card">
+      <table class="table table-bordered table-striped table-responsive-sm">
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Order Status</th>
+            <th>Order Date</th>
+            <th>Delivery Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orderTrackingList">
+            <td>{{ order.orderId }}</td>
+            <td>
+              <select [(ngModel)]="order.orderStatus" (change)="updateOrderStatus(order)">
+                <option value="PENDING">Pending</option>
+                <option value="DISPATCHED">Dispatched</option>
+                <option value="IN_TRANSIT">In Transit</option>
+                <option value="DELIVERED">Delivered</option>
+                <option value="CANCELLED">Cancelled</option>
+                <option value="COMPLETED">Completed</option>
+              </select>
+            </td>
+            <td>{{ order.orderDate | date }}</td>
+            <td>{{ order.deliveryDate ? (order.deliveryDate | date) : 'Not yet dispatched' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+</main>

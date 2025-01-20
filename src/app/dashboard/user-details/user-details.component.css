@@ -1,74 +1,143 @@
 .user-details-card {
-    background: var(--white);
-    border-radius: 1rem;
-    padding: 2rem;
-    max-width: 800px;
-    margin: 3rem auto;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-  
-  .profile-section {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  
-  .profile-avatar img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--primary-color);
-  }
-  
-  .profile-info h2 {
-    font-size: 1.75rem;
-    color: var(--text-color);
-    margin-top: 1rem;
-  }
-  
-  .profile-info .username {
-    font-size: 1.125rem;
-    color: #666;
-  }
-  
-  .details-section {
-    margin-top: 2rem;
-  }
-  
-  .detail {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-  }
-  
-  .detail-label {
-    font-weight: 600;
-    color: var(--text-color);
-  }
-  
-  .detail-value {
-    color: #666;
-  }
-  .back-to-dashboard {
-    text-align: center;
-    margin-top: 2rem;
-  }
-  
-  .back-to-dashboard button {
-    background: var(--primary-color);
-    color: var(--white);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .back-to-dashboard button{
-    background-color: rgb(255, 245, 234);
-  }
-  
-  .back-to-dashboard button:hover {
-    background-color:rgb(255, 189, 189) ;
-  }
-  
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 3rem auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;  /* Keeps background relative to position overlay */
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary-color);
+}
+
+.profile-info h2 {
+  font-size: 1.75rem;
+  color: var(--text-color);
+  margin-top: 1rem;
+}
+
+.profile-info .username {
+  font-size: 1.125rem;
+  color: #666;
+}
+
+/* Details Section */
+.details-section {
+  margin-top: 2rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.detail-value {
+  color: #666;
+}
+
+.back-to-dashboard {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.back-to-dashboard button {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-dashboard button {
+  background-color: rgb(255, 245, 234);
+}
+
+.back-to-dashboard button:hover {
+  background-color: rgb(255, 189, 189);
+}
+
+/* Edit Overlay */
+.edit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);  /* Semi-transparent dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;  /* Hidden by default */
+  opacity: 0;  /* Hidden by default */
+  transition: opacity 0.3s ease-in-out;  /* Smooth fade-in */
+}
+
+/* Show overlay */
+.edit-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modal content (edit form) */
+.edit-modal {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Input fields inside modal */
+.edit-modal input,
+.edit-modal select,
+.edit-modal textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.edit-modal button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-modal button:hover {
+  background-color: rgb(255, 189, 189);
+}
+
+/* Blur effect for background when overlay is active */
+.user-details-card.blur {
+  filter: blur(5px);
+  pointer-events: none;
+}
