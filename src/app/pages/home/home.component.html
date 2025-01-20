@@ -1,74 +1,105 @@
-<app-navbar></app-navbar>
-<div class="banner">
-  <!-- Swiper Container -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <!-- Slide 1 -->
-      <div class="swiper-slide">
-        <img src="/assets/img/Banner1.png" alt="Banner 1" class="banner-slide-img">
-      </div>
-      <!-- Slide 2 -->
-      <div class="swiper-slide">
-        <img src="/assets/img/Banner2.png" alt="Banner 2" class="banner-slide-img">
-      </div>
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img src="/assets/img/Banner3.png" alt="Banner 3" class="banner-slide-img">
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <img src="/assets/img/Banner4.png" alt="Banner 4" class="banner-slide-img">
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="swiper-slide">
-        <img src="/assets/img/Banner5.jpg" alt="Banner 4" class="banner-slide-img">
-      </div>
-      
-    </div>
-    <!-- Add Pagination if needed -->
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <div class="container text-center py-5">
-    <!-- <h1 class="banner-title">Welcome to the Credit Card App</h1> -->
-    <!-- <p class="banner-description">Manage your credit cards effortlessly!</p> -->
-    <!-- <a class="btn btn-primary btn-lg" routerLink="/credit-card-service">Explore Services</a> -->
-  </div>
+<!-- Home Component Template (home.component.html) -->
+<nav class="nav">
+  <div class="container nav-content">
+    <a href="./" style="text-decoration: none;">
+      <div class="logo">CPAY</div>
+    </a>
+    <div class="nav-links">
+     <!-- Services Dropdown -->
+<div class="nav-link dropdown">
+  <a href="#" class="nav-link">Services</a>
+  <a class="dropdown-menu">
+    <a href="/credit-card-service" style="text-decoration: none;"> <div class="dropdown-item">Services</div></a>
+    <a href="/rewards" style="text-decoration: none;"><div class="dropdown-item">Rewards</div></a>
+    <a href="/benefits" style="text-decoration: none;">  <div class="dropdown-item">Benefits</div></a>
+  </a>
 </div>
 
-<!-- New Section Below the Banner for Rewards & Benefits -->
-<div class="rewards-benefits">
-  <div class="container text-center py-5">
-    <h2 class="section-title">Card Features and Benefits</h2>
-    <p class="section-description">
-      Earn exclusive rewards and enjoy amazing benefits with our credit card services. Whether you want cashback, discounts, or points, we have you covered.
-    </p>
-    <div class="row">
-      <div class="col-md-4">
-        <img src="assets/img/cashback.png" alt="Cashback" class="reward-image mb-3 img-fluid" />
-        <div class="reward-item">
-          <h4>Cashback</h4>
-          <p>Earn up to 5% cashback on all purchases!</p>
-        </div>
+      <a href="/about-us" class="nav-link">About</a>
+      <a href="/contact-us" class="nav-link">Contact Us</a>
+      <a href="./login" class="nav-link">Login</a>
+      <a href="./register" class="nav-link">Register</a>
+    </div>
+  </div>
+</nav>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">rewards for paying credit card bills.</h1>
+      <p class="hero-subtitle">join 9M+ members who win rewards and cashbacks everyday</p>
+      <a href="#" class="cta-button">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Company Section -->
+<section class="company-section">
+  <div class="container">
+    <div class="company-content">
+      <div class="company-image">
+        <img src="assets/img/home-image-credit.jpg" alt="Company Image">
       </div>
-      <div class="col-md-4">
-        <img src="assets/img/discount.png" alt="Cashback" class="reward-image mb-3 img-fluid" />
-        <div class="reward-item">
-          <h4>Discounts</h4>
-          <p>Exclusive discounts at top retail stores.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <img src="assets/img/points.png" alt="Cashback" class="reward-image mb-3 img-fluid" />
-        <div class="reward-item">
-          <h4>Points</h4>
-          <p>Accumulate reward points that you can redeem for various offers.</p>
-        </div>
+      <div class="company-motto">
+        <h2>Empowering You To Earn More</h2>
+        <p>Join the millions who are already earning rewards and cashbacks by paying their credit card bills with us.</p>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- New Section with Image on the Right and Benefits for Credit Card -->
+<section class="company-benefits-section">
+  <div class="container">
+    <div class="company-content">
+      <div class="company-motto">
+        <h2>Your Trustworthy Credit Card Partner</h2>
+        <p>Experience unmatched security, exclusive benefits, and a seamless process with every purchase. Our cards are designed to offer you the best rewards and protect your financial health.</p>
+      </div>
+      <div class="company-image">
+        <img src="assets/img/home-image-partner.jpg" alt="Credit Card Benefits Image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Cards Section -->
+<section class="floating-cards-section">
+  <div class="container">
+    <div class="floating-cards" style="cursor: pointer;">
+      <div class="credit-card card-1">
+        <img src="assets/img/home-image-1.jpg" alt="Credit Card 1" class="card-image">
+      </div>
+      <div class="credit-card card-2">
+        <img src="assets/img/home-image-2.jpg" alt="Credit Card 2" class="card-image">
+      </div>
+      <div class="credit-card card-3">
+        <img src="assets/img/home-image-4.jpg" alt="Credit Card 3" class="card-image">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <h3 class="feature-title">credit card bill payment</h3>
+        <p class="feature-description">pay your credit card bills and earn rewards on each payment</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3 class="feature-title">exclusive rewards</h3>
+        <p class="feature-description">unlock exclusive rewards and cashbacks on premium brands</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3 class="feature-title">credit score check</h3>
+        <p class="feature-description">check and track your credit score for free</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <app-footer></app-footer>

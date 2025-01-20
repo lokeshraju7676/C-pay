@@ -1,71 +1,216 @@
-
-.main {
-    background: #f8f8f8;
-    padding: 10px 0;
-}
-.social-login .socials {
-    list-style: none;
-    display: flex; /* Align items side by side */
+/* Reset and base styles */
+* {
+    margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Utility classes */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: center;  /* Center the logo */
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #dcae4b;
+  }
+  
+  /* Main Login Form Styles */
+  .main {
+    padding: 10px 0;
+  }
+  
+  .sign-in {
+    padding: 60px 0;
+  }
+  
+  .signin-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .signin-image figure img {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .signin-form {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  /* NAMASTE!! text styling */
+  .namaste-text {
+    text-align: left;
+    font-size: 36px;
+    color: #000000;  /* Use the same color as the button */
+    margin-bottom: 20px;
+    font-weight: bolder;
 
-.social-login .socials li {
-    margin-right: 15px; /* Add some space between the items */
-}
-
-.social-login .socials li a {
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  
+  .form-group input:focus {
+    border-color: #dcae4b;
+    outline: none;
+  }
+  
+  .text-danger {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .forgot-password-link {
+    text-decoration: none;
+    color: #010101;
+    font-size: 14px;
+    float: right;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Remember Me and Forgot Password on the same line */
+  .form-group.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .remember-me {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: #000; /* Text color */
-}
-
-.social-login .socials li a img {
-    width: 30px; /* Set uniform image size */
-    height: 30px; /* Set uniform image size */
-    margin-right: 10px; /* Space between image and text */
-    border-radius: 50%; /* Make the image circular */
-}
-
-.social-login .socials li a:hover {
-    color: #007BFF; /* Change text color on hover */
-}
-
-.forgot-password-link {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 14px;
-    float: right; /* Align to the right side of the parent container */
-    margin-top: 5px;
-    margin-right: 20px; /* Move the link a bit further right */
-}
-
-.forgot-password-link:hover {
-    text-decoration: underline;
-}
-.form-button {
+  }
+  
+  .remember-me input {
+    margin-right: 10px;
+  }
+  
+  .label-agree-term {
+    color: #a0a0a0;
+  }
+  
+  .form-button {
     display: flex;
-    justify-content: center; /* Center the button horizontally */
-}
-
-.form-submit {
-    background-color: #4192d4; /* Green background color */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    padding: 12px 24px; /* Add more padding to make the button bigger */
-    font-size: 16px; /* Increase font size */
-    font-weight: bold; /* Make text bold */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.form-submit:hover {
-    background-color: #45a049; /* Darker green when hovered */
-}
-
-
-
-
-
-
+    justify-content: center;
+  }
+  
+  .form-submit {
+    background-color: #dcae4b;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-submit:hover {
+    background-color: #b18f3c;
+  }
+  
+  /* Sign up link */
+  .signup-image-link {
+    text-decoration: none;
+    color: #dcae4b;
+    font-size: 14px;
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+  }
+  
+  .signup-image-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Footer */
+  app-footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #a0a0a0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .signin-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .signin-image figure img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .signin-form {
+      width: 100%;
+    }
+  
+    .form-group input {
+      padding: 10px;
+    }
+  }
+  

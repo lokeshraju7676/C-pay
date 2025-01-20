@@ -107,3 +107,43 @@ a:hover, a:active {
   max-width: 300px;  /* Restricts the image size to a maximum width */
   height: auto;  /* Maintains the aspect ratio */
 }
+  /* Navigation */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    background: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: center;  /* Center the logo */
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #dcae4b;
+  }
+  
