@@ -35,6 +35,9 @@ import { RewardsComponent } from './dashboard/rewards/rewards.component';
 import { CreditCardServiceComponent } from './pages/credit-card-service/credit-card-service.component';
 import { TrackingComponent } from './order-tracking/tracking/tracking.component';
 import { OrderTrackingDetailsComponent } from './dashboard/ordertrackingdetails/ordertrackingdetails.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PaymentSuccessComponent } from './payment-success/payment-success.component';
+import { CreditcardapplicationsComponent } from './dashboard/creditcardapplications/creditcardapplications.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +60,9 @@ import { OrderTrackingDetailsComponent } from './dashboard/ordertrackingdetails/
     RewardsComponent,
     CreditCardServiceComponent,
     OrderTrackingDetailsComponent,
+    PaymentComponent,
+    PaymentSuccessComponent,
+    CreditcardapplicationsComponent
   ],
   imports: [
     BrowserModule,  // Includes CommonModule

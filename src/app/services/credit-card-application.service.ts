@@ -94,7 +94,7 @@ export class CreditCardApplicationService {
       'Authorization': `Bearer ${token}`
     });
 
-    return this.http.post(this.apiUrl, applicationData, { headers });
+    return this.http.post(`${this.apiUrl}/apply`, applicationData, { headers });
   }
 
   // Track Order (Admin only)
@@ -109,7 +109,7 @@ export class CreditCardApplicationService {
 
   // Get a user by ID
   getUserById(id: number): Observable<any> {
-    return this.http.get(`${this.userApiUrl}/${id}`);
+    return this.http.get(`${this.userApiUrl}/${id}`, {responseType:'text'});
   }
 
   // Get a user by username
@@ -179,5 +179,18 @@ export class CreditCardApplicationService {
     return this.http.get<CreditCardApplication>(`${this.apiUrl}/applicationId/${applicationId}`);
   }
 
+// Fetch all credit card applications
+getAllCreditCardApplications(): Observable<any[]> {
+  return this.http.get<any[]>(`${this.apiUrl}/all`); // Make sure this is the correct backend URL
+}
+
+// Method to delete a credit card application
+deleteCreditCardApplication(id: number): Observable<any> {
+  return this.http.delete<any>(`${this.apiUrl}/delete/${id}`);
+}
+
+updateCreditCardApplication(id: number, application: any): Observable<any> {
+  return this.http.put<any>(`${this.apiUrl}/${id}`, application);
+}
   
 }
