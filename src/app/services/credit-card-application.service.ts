@@ -109,7 +109,7 @@ export class CreditCardApplicationService {
 
   // Get a user by ID
   getUserById(id: number): Observable<any> {
-    return this.http.get(`${this.userApiUrl}/${id}`, {responseType:'text'});
+    return this.http.get(`${this.userApiUrl}/${id}`);
   }
 
   // Get a user by username

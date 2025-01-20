@@ -1,6 +1,5 @@
-<app-customer-navbar></app-customer-navbar>
-
-<main class="dashboard-main" style="background-color: rgba(139, 139, 139, 0.347);">
+<app-admin-navbar></app-admin-navbar>
+<body class="dashboard-main" style="background-color: #f2f2f2;"> <!-- Subtle grey background for the body -->
   <!-- Welcome Section -->
   <div class="welcome-card">
     <div class="welcome-content">
@@ -13,10 +12,9 @@
       </div>
     </div>
   </div>
-
+  
   <!-- Quick Actions -->
-  <div class="quick-actions">
-    
+  <div class="quick-actions" style="margin-top: 100px; margin-bottom: 100px;">
     <div class="action-card" (click)="goToCustomerDetails()">
       <div class="action-icon">
         <span class="material-icons">person</span>
@@ -39,7 +37,6 @@
       <span class="material-icons arrow" style="color: black;">chevron_right</span>
     </div>
 
-
     <!-- New Card for Credit Card Applications -->
     <div class="action-card" (click)="goToCreditCardApplications()">
       <div class="action-icon">
@@ -52,8 +49,7 @@
       <span class="material-icons arrow" style="color: black;">chevron_right</span>
     </div>
 
-
-    <div class="action-card">
+    <!-- <div class="action-card">
       <div class="action-icon">
         <span class="material-icons">card_giftcard</span>
       </div>
@@ -62,18 +58,22 @@
         <p style="color: black;">Edit Cards</p>
       </div>
       <span class="material-icons arrow" style="color: black;">chevron_right</span>
-    </div>
+    </div> -->
 
   </div>
 
   <!-- Recent Transactions -->
+  <!-- Recent Transactions -->
+
   <div class="transactions-card">
     <div class="card-header">
-      <h2>Requests</h2>
+     
+      <div class="time-display">
+        <span class="time">{{ currentTime }}</span>
+      </div>
+      <div class="quote-of-the-day">
+        <p>"{{ dailyQuote }}"</p>
+      </div>
     </div>
-    <ul ng-if="post.capabilities.items.length == 0">
-        <li *ngFor="let cust of customerList">{{cust.name}}</li>
-    </ul>
-    <h4></h4>
   </div>
-</main>
+</body>   

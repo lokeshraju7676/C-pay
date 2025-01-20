@@ -9,6 +9,12 @@ import { AuthService } from 'src/app/authservice.service';
   styleUrls: ['./customer-dashboard.component.css']
 })
 export class CustomerDashboardComponent implements OnInit {
+userName: string | null = null;
+
+
+goPayment() {
+  this.router.navigate(['/payment']);  
+}
 
   constructor(private authService: AuthService,private router: Router) {}
 goDetails() {
@@ -21,7 +27,8 @@ this.router.navigate(['./userdetails']);
     }
 
   ngOnInit(): void {
-    this.adminName = this.authService.getAdminName();  // Get the name of the logged-in user
+    this.adminName = this.authService.getAdminName();  
+    this.userName = this.authService.getUserName(); 
   }
   
 
@@ -31,7 +38,7 @@ this.router.navigate(['./userdetails']);
 
    // Navigate to the credit card application component
    goApplyCreditCard() {
-    this.router.navigate(['/creditcardapplication']);  
+    this.router.navigate(['/credit-card-application']);  
   }
 
 }

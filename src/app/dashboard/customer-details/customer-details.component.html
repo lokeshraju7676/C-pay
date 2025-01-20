@@ -1,4 +1,4 @@
-<app-customer-navbar></app-customer-navbar>
+<app-admin-navbar></app-admin-navbar>
 
 <main class="dashboard-main"
     style="background-color: rgba(139, 139, 139, 0.347);
@@ -8,7 +8,7 @@
 
     <!-- Back to Dashboard Button -->
     <div class="back-button-container">
-        <button class="back-button" (click)="goBackToDashboard()" style="margin-bottom: 20px;">
+        <button class="back-button" (click)="goBackToDashboard()">
             Back to Dashboard
         </button>
     </div>
@@ -16,7 +16,7 @@
     <!-- Customer List Table -->
     <div class="customer-details"
         style="transition: transform 0.3s ease, box-shadow 0.3s ease;
-               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37); border-radius: 10px;">
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.37);">
 
         <table class="table table-striped">
             <thead>
