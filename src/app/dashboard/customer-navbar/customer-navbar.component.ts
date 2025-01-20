@@ -13,6 +13,7 @@ export class CustomerNavbarComponent implements OnInit {
     'Your reward points have been updated.',
   ];
   notificationsOpen = false;
+  router: any;
   constructor(private authService: AuthService, private route: Router) {}
 
   ngOnInit(): void {}
@@ -42,4 +43,12 @@ export class CustomerNavbarComponent implements OnInit {
     this.route.navigate(['./customerdashboard']);
     ;
   }
+
+/*   goApplyCreditCard() {
+    if (this.route) {
+      this.route.navigate(['./creditcardapplication']);
+    } else {
+      console.error('Router is undefined!');
+    }
+  } */
 }

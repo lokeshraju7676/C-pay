@@ -15,6 +15,7 @@ interface LoginResponse {
 })
 export class AuthService {
   private apiUrl = 'http://localhost:8080/api/auth'; // Adjust the URL as needed
+  private payurl='http://localhost:8080/api/carddetails';
 
   constructor(private http: HttpClient) {}
 
@@ -66,4 +67,20 @@ export class AuthService {
     console.error('An error occurred:', error);
     return throwError(() => new Error(error.message || 'Server error'));
   }
+
+  // Method to fetch card details (example)
+  getCardDetails(cardNumber: string): Observable<any> {
+    // Adjust the URL based on your backend API for fetching card details
+    return this.http.get<any>(`${this.payurl}/${cardNumber}`, {
+      headers: this.getAuthHeaders()  // Add authentication header if required
+    });
+  }
+
+  // Method to fetch all card details (example)
+  getAllCardDetails(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.payurl}/all`, {
+      headers: this.getAuthHeaders()  // Add authentication header if required
+    });
+  }
+
 }

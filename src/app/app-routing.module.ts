@@ -16,6 +16,9 @@ import { RewardsComponent } from './dashboard/rewards/rewards.component';
 import { CreditCardServiceComponent } from './pages/credit-card-service/credit-card-service.component';
 import { TrackingComponent } from './order-tracking/tracking/tracking.component';
 import { OrderTrackingDetailsComponent } from './dashboard/ordertrackingdetails/ordertrackingdetails.component';
+import { PaymentComponent } from './payment/payment.component';
+import { PaymentSuccessComponent } from './payment-success/payment-success.component';
+import { CreditcardapplicationsComponent } from './dashboard/creditcardapplications/creditcardapplications.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Default route redirects to 'home'
@@ -33,6 +36,9 @@ const routes: Routes = [
   {path: 'userdetails', component: UserDetailsComponent},
   {path:'rewards', component:RewardsComponent},
   {path:'ordertrackingdetails', component:OrderTrackingDetailsComponent},
+  {path:'payment', component:PaymentComponent},
+  {path:'payment-success', component:PaymentSuccessComponent},
+  {path:'creditcardapplications', component:CreditcardapplicationsComponent},
   { path: '**', redirectTo: 'home' },  // Wildcard route to handle unmatched URLs
 ];
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { CreditCardApplicationService } from 'src/app/services/credit-card-application.service';
 
 @Component({
@@ -14,14 +15,14 @@ export class CreditCardApplicationComponent {
     employmentStatus: '',
     annualIncome: 0, // Default numeric value
     address: '',
-    applicationDate: '',
+    applicationDate: new Date().toISOString(),
     applicationStatus: 'PENDING', // Default value
     username: '',
     orderId: null,  // Add orderId as null
     id: 0           // Add id as 0 (or you can leave it out, if not needed in backend)
   };
 
-  constructor(private creditCardApplicationService: CreditCardApplicationService) {}
+  constructor(private creditCardApplicationService: CreditCardApplicationService, private route: Router) {}
 
   // Function to handle form submission
   submitApplication() {
@@ -30,6 +31,7 @@ export class CreditCardApplicationComponent {
       this.creditCardApplicationService.submitApplication(this.application).subscribe({
         next: (response) => {
           alert('Application submitted successfully!');
+          this.route.navigate(['/home']);
           console.log(response);
         },
         error: (error) => {

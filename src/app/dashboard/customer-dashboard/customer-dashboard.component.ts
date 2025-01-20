@@ -9,16 +9,16 @@ import { AuthService } from 'src/app/authservice.service';
   styleUrls: ['./customer-dashboard.component.css']
 })
 export class CustomerDashboardComponent implements OnInit {
-goRewards() {
-this.router.navigate(['./rewards']);
-}
+
   constructor(private authService: AuthService,private router: Router) {}
 goDetails() {
 this.router.navigate(['./userdetails']);
 }
   adminName: string = '';
 
-  
+  goRewards() {
+    this.router.navigate(['./rewards']);
+    }
 
   ngOnInit(): void {
     this.adminName = this.authService.getAdminName();  // Get the name of the logged-in user
@@ -28,4 +28,10 @@ this.router.navigate(['./userdetails']);
   gotrack(){
     this.router.navigate(['/tracking']);
   }
+
+   // Navigate to the credit card application component
+   goApplyCreditCard() {
+    this.router.navigate(['/creditcardapplication']);  
+  }
+
 }

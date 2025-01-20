@@ -1,7 +1,6 @@
 <app-customer-navbar></app-customer-navbar>
 
-
-<main class="dashboard-main" style=" background-color: rgb(255, 245, 234);">
+<main class="dashboard-main" style="background-color: rgb(255, 245, 234);">
   <!-- Welcome Section -->
   <div class="welcome-card">
     <div class="welcome-content">
@@ -17,7 +16,7 @@
 
   <!-- Quick Actions -->
   <div class="quick-actions">
-    <div class="action-card" (click)="goDetails()" >
+    <div class="action-card" (click)="goDetails()">
       <div class="action-icon">
         <span class="material-icons">person</span>
       </div>
@@ -46,6 +45,18 @@
       <div class="action-content">
         <h3>Rewards</h3>
         <p>Check your reward points</p>
+      </div>
+      <span class="material-icons arrow">chevron_right</span>
+    </div>
+
+    <!-- New Apply for Credit Card Section -->
+    <div class="action-card" (click)="goApplyCreditCard()">
+      <div class="action-icon">
+        <span class="material-icons">credit_card</span>
+      </div>
+      <div class="action-content">
+        <h3>Apply for Credit Card</h3>
+        <p>Get a new credit card today</p>
       </div>
       <span class="material-icons arrow">chevron_right</span>
     </div>
@@ -89,46 +100,7 @@
           <p class="date">Mar 13, 2024</p>
         </div>
       </div>
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Starbucks</p>
-          <p class="type">Food & Drink</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$5.75</p>
-          <p class="date">Mar 13, 2024</p>
-        </div>
-      </div>
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Starbucks</p>
-          <p class="type">Food & Drink</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$5.75</p>
-          <p class="date">Mar 13, 2024</p>
-        </div>
-      </div>
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Starbucks</p>
-          <p class="type">Food & Drink</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$5.75</p>
-          <p class="date">Mar 13, 2024</p>
-        </div>
-      </div>
-      <div class="transaction-item">
-        <div class="transaction-info">
-          <p class="merchant">Starbucks</p>
-          <p class="type">Food & Drink</p>
-        </div>
-        <div class="transaction-amount">
-          <p class="amount">-$5.75</p>
-          <p class="date">Mar 13, 2024</p>
-        </div>
-      </div>
+      <!-- Repeat transaction items here... -->
     </div>
   </div>
 </main>

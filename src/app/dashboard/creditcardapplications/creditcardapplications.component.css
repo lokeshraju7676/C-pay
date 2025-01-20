@@ -1,0 +1,259 @@
+/* General Styles */
+.dashboard-main {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4; /* Match the table background color */
+    position: relative;
+}
+
+.applications-card {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card-header h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styling */
+.applications-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.applications-table th, .applications-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.applications-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.applications-table td {
+    background-color: #fff;
+}
+
+/* Actions Column Styling */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.actions .btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    background-color: transparent;
+}
+
+.actions .btn i {
+    color: #555;
+}
+
+.actions .btn-edit {
+    color: #4CAF50;
+}
+
+.actions .btn-edit:hover i {
+    color: #45a049;
+}
+
+.actions .btn-delete {
+    color: #f44336;
+}
+
+.actions .btn-delete:hover i {
+    color: #e53935;
+}
+
+/* Edit Form Overlay Styling */
+.edit-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    backdrop-filter: blur(5px); /* Apply blur effect */
+}
+
+/* Edit Form Styling */
+.edit-form {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit-form .form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.edit-form .btn-save,
+.edit-form .btn-cancel {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-form .btn-save {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-form .btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Back Button Styling */
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 70px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #45a049;
+}
+
+/* Delete Confirmation Modal Styling */
+.delete-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+}
+
+.delete-modal {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.delete-modal .modal-actions {
+    margin-top: 20px;
+}
+
+.delete-modal .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.delete-modal .btn-delete-confirm {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-modal .btn-cancel {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .applications-table th, .applications-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .actions .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-back {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-main {
+        padding: 10px;
+    }
+
+    .applications-card {
+        padding: 15px;
+    }
+
+    .card-header h2 {
+        font-size: 20px;
+    }
+
+    .applications-table th,
+    .applications-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .actions .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .btn-back {
+        font-size: 12px;
+        padding: 30px 12px;
+    }
+}

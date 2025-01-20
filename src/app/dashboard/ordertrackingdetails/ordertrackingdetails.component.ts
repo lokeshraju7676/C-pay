@@ -105,7 +105,7 @@ export class OrderTrackingDetailsComponent implements OnInit {
 
     // Call the service to update the order status
     this.orderTrackingService
-      .updateOrderStatus(order.orderId, order.orderStatus)
+      .updateOrderStatus(order.orderId, order.orderStatus) // Make the API call to update order status
       .pipe(
         catchError((error) => {
           this.errorMessage = 'Error updating order status. Please try again later.';
@@ -117,8 +117,10 @@ export class OrderTrackingDetailsComponent implements OnInit {
           this.errorMessage = ''; // Clear error message if the update is successful
           console.log('Order status updated successfully');
         } else {
-          this.errorMessage = 'Failed to update order status.';
+          this.errorMessage = 'Failed to update order status.'; // If the update failed, show error message
         }
       });
   }
+
+  
 }

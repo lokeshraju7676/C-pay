@@ -24,4 +24,9 @@ export class AdminDashboardComponent {
   goToTrackOrder(): void {
     this.router.navigate(['/ordertrackingdetails']); // Replace '/track-order' with the actual route if different
   }
+
+  goToCreditCardApplications(){
+    this.router.navigate(['/creditcardapplications']);
+  }
+
 }

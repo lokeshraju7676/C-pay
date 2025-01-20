@@ -1,6 +1,5 @@
 <app-customer-navbar></app-customer-navbar>
 
-
 <main class="dashboard-main" style="background-color: rgba(139, 139, 139, 0.347);">
   <!-- Welcome Section -->
   <div class="welcome-card">
@@ -16,7 +15,6 @@
   </div>
 
   <!-- Quick Actions -->
-   
   <div class="quick-actions">
     
     <div class="action-card" (click)="goToCustomerDetails()">
@@ -25,9 +23,9 @@
       </div>
       <div class="action-content">
         <h3>Show Customers</h3>
-        <p style="color: black;">View and manage your credit cards</p>
+        <p style="color: black;">View and manage customer details</p>
       </div>
-      <span class="material-icons arrow"  style="color: black;">chevron_right</span>
+      <span class="material-icons arrow" style="color: black;">chevron_right</span>
     </div>
 
     <div class="action-card" (click)="goToTrackOrder()">
@@ -35,11 +33,25 @@
         <span class="material-icons">pin_drop</span>
       </div>
       <div class="action-content">
-        <h3>Track Order</h3>
-        <p style="color: black;">Track your spending</p>
+        <h3>Show Orders</h3>
+        <p style="color: black;">Check the status</p>
       </div>
-      <span class="material-icons arrow"  style="color: black;" >chevron_right</span>
+      <span class="material-icons arrow" style="color: black;">chevron_right</span>
     </div>
+
+
+    <!-- New Card for Credit Card Applications -->
+    <div class="action-card" (click)="goToCreditCardApplications()">
+      <div class="action-icon">
+        <span class="material-icons">credit_card</span>
+      </div>
+      <div class="action-content">
+        <h3>Show Credit Card Applications</h3>
+        <p style="color: black;">View and manage credit card applications</p>
+      </div>
+      <span class="material-icons arrow" style="color: black;">chevron_right</span>
+    </div>
+
 
     <div class="action-card">
       <div class="action-icon">
@@ -51,6 +63,7 @@
       </div>
       <span class="material-icons arrow" style="color: black;">chevron_right</span>
     </div>
+
   </div>
 
   <!-- Recent Transactions -->
@@ -61,7 +74,6 @@
     <ul ng-if="post.capabilities.items.length == 0">
         <li *ngFor="let cust of customerList">{{cust.name}}</li>
     </ul>
-    <h4 ></h4>
-    
+    <h4></h4>
   </div>
 </main>
